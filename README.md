@@ -1,104 +1,163 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Parent Hero
 
-Welcome USER_NAME,
+Parent hero is a puzzle/detective game where the goal is to locate a lost item. In order to locate said item the hero - you - must solve certain riddles to gain access to rooms and objects that are in some ways blocked. The game is inspired by the classic text based role playing games of the early computers, as well as the adventure game Shadowgate and the detective game Déjà vu for the Nintendo Entertainment System.
+The site with the game was build as a part of a diploma in fullstack software developlment in a course provided by code institute.
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. The last update to this file was: **July 2, 2021**
+## 1. User Experience
 
-## Gitpod Reminders
+### 1.1 Project introduction
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+The site is designed to give the user information about what the game is, as well as a guide on how to play, before actually starting the game. Parent Hero will try to recreate the classic feel of controlling your hero using text based commands, giving the user a sense of control and that anything is possible. The game looks and feel like a game from the 80's without all the shortcomings in UX that so often were the case back then. Guiding the hero through the challanges should be equally challanging and rewarding.
 
-`python3 -m http.server`
+### 1.2 Design guidelines
 
-A blue button should appear to click: _Make Public_,
+Not everything that happened in the past was necessarily better, and the lack of information about how to use a system and how to play a game is a thing of the past that should best be left there. While some nostalgics may find the game, it is reasonable to assume that most user will have little to no experience playing a game like this. Therefore the first thing that greets the user will be a welcoming screen, shortly explaining what this is. The srartscreen will direct the user to an about page, giving more information about what the game is and how it came to be, as well as a "how to play" section. The "how to play" will use images and a step by step guide to help players get a basic understanding of how the game works.
 
-Another blue button should appear to click: _Open Browser_.
+### 1.3 Project goals
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+- Provide a challenging yet funny game that introduces new and younger players to old school text based games.
 
-A blue button should appear to click: _Make Public_,
+- Provide a trip down memory lane for older players who has previous experience playing similar games
 
-Another blue button should appear to click: _Open Browser_.
+- Create a functioning game that is both retro and unique, that excites players enough to want a "chapter 2"
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+### 1.4 Target audience
 
-To log into the Heroku toolbelt CLI:
+The main audience of the site are likely to be users who enjoy playing games, but have limited experience with this type of game. A portion of them will not be used to games at all. Another main part of the audience will be experienced and older players looking for a retro game to make them feel nostalgic and remember all the good times they had, without all the headaches that came along with them. I can therefore devide the taget audince into two main categories:
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+- User who have little experience with this type of game or little experience of games in general: <br>
+**Needs:** Information about what type of game they are looking at, and why it looks the way it does. They will also want an in deapth explanation on how to play the game.<br>
+**Goal:** Provide easily accessible information about the game and games like it in general as well as a guide on how to play. <br>
+**How:** Create a landing page that provides some welcoming information and directs the user to an about and how to play section.
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+- User who used to play similar games before and are looking for retro games:<br>
+**Needs:** To feel familiar and to recognize the layout and design as well as a reminder on how things work, to avoid the trail and error of the old days (that just spoils the fun).<br>
+**Goal:** Design the game to look retro and close to the inspirational games, and provide encouragement for these users to find the "how to play" as well.<br>
+**How:** Using pixelated images and old school fonts when presenting information. Using arrows and other pointers to the about/how to play to guide even these users to the information.
 
-------
+### 1.5 User stories
 
-## Release History
+- As an ownder, I want to make sure new users are able to find sufficent information to play the game
+- As an ownder, I want to make the user have the retro feel from the moment they enter the site
+- As an ownder, I want to make sure the game is playable and that the clues left in the game are not to difficult to find
+- As a user, I want to learn more about the inspiration for the game
+- As a user, I want to learn how to play the game
+- As a user, I want a retro game that is close enough to the classics to feel right, but still gives me a new experience
+- As a user, I want to be able to save my progress
+- As a user, I want to get the feeling of accomplishment, it must be clear if I won or not
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+### 1.6 Design
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+## 2. Features
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+### 2.1 Existing features
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+### 2.2 Features left to implement
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+## 3. Technologies Used
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+### 3.1 Languages Used
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+### 3.2 Frameworks, Libraries and Programs Used
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+1. [Balsamiq](https://balsamiq.com/)
+    - Balsamiq was used to create a wireframe during the design process.
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+1. [GitPod](https://gitpod.io)
+    - GitPod was the IDE used to develop the site.
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+1. [GitHub](https://github.com/)
+    - GitHub was used to store the project code and to deploy the site using GitHub pages.
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+1. [Google fonts](https://fonts.google.com/)
+    - Google fonts was used to compare fonts and find suitable fonts that go well together.
 
-------
+1. [Font Awesome](https://fontawesome.com/)
+    - Font awesome was used for symbols to add flavor to the site, and usaed for social media links.
 
-## FAQ about the uptime script
+1. [HTML validator](https://validator.w3.org/#validate_by_input)
+    - Provided by W3C and used to validate the html on every page.
 
-**Why have you added this script?**
+1. [CSS validator](https://jigsaw.w3.org/css-validator/#validate_by_input)
+    - Provided by W3C and used to validate the sites css.
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+1. [Responsive design checker](https://www.responsivedesignchecker.com/)
+    - Used to confirm responsiveness on different devices.
 
-**How will this affect me?**
+1. [tinypng](https://tinypng.com/)
+    - Used to change image file size for shorter loading times without quiality loss.
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+1. [contrast tester](https://webaim.org/resources/contrastchecker/)
+    - The Webaim contrast tester is used to check if contrast was good enough to display text on the selected background.
+## 4. Testing
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+### 4.1 Developmen process
+This section vill detail how each part of the site was implemented and tested during development to give an insight to have the site took form. A summary of testing can be found further down.
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
 
-**So….?**
+### 4.1 Validator testing
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+The HTML was tested using this [validator](https://validator.w3.org/) with no errors or warnings for any of the .html files
 
-**Can I opt out?**
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+The CSS was tested using this [validator](https://jigsaw.w3.org/) The 9 warnings are all from the part of the hamburger nav bar menues where I followed a tutorial. I decided to keep that code as is, as the code runs ands the nav bar works. When going through the validator code I also noticed that the subsection menu was placed at the wrong side, see nav bar for more info.
 
+- [CSS validation result](assets/images/readme-images/valid-css.png)
+
+
+### 4.2 Responsiveness and functionality
+
+#### 4.2.1 Responsiveness
+
+
+#### 4.2.2 Browser compability
+
+
+#### 4.2.3 Contrast testing
+
+
+### 4.3 Unfixed bugs
+
+
+### 4.4 Testing user Stories
+
+
+## 5. Deployment
+
+### 5.1 GutHup Pages
+
+The site was deployed to GitHub pages. The steps to deploy are as follows:
+1. Login to [GitHub](https://github.com/) and go to the GitHub repository.
+1. In the GitHub repository, navigate to the Settings tab and select the "Pages" options to the left.
+1. From the source section drop-down menu, select the Master Branch
+1. Once the master branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment.
+
+The live link can be found here - https://oljung.github.io/portfolio-project-two/
+
+### 5.2 Make a clone
+To clone the repository to make a local copy of it, follow these steps:
+1. Login to [GitHub](https://github.com/) and locate the [repository](https://github.com/oljung/portfolio-project-two)
+1. Under the repository name, click "Clone or download"
+1. To clone the repository using HTTPS copy the link under "clone with HTTPS"
+1. Open Git Bash
+1. Change directory to where you want the clone to be saved
+1. Use the command "git clone" and then paste the url you copied from step 3
 ```
-pkill uptime.sh
-rm .vscode/uptime.sh
+$ git clone https://github.com/oljung/portfolio-project-two
 ```
+7. Your clone will now be saved, and any commits will be saved to your new repository
 
-**Anything more?**
+## Credits
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+### Code
 
----
 
-Happy coding!
+### Content
+
+
+### Media
+
+Images used on this site are from these open source galleries: [pixabay](https://pixabay.com/), [unsplash](https://unsplash.com/) and [istock](https://www.istockphoto.com/en).
