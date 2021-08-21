@@ -8,7 +8,23 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    
+    <!-- Tab bar from tutorial found on https://www.w3schools.com/howto/howto_js_tabs.asp -->
+    <div class="container">
+        <header class="tab-bar">
+            <button class="tablinks" onclick="displayContent(event, 'welcome')">Welcome</button>
+            <button class="tablinks" onclick="displayContent(event, 'about')">About</button>
+            <button class="tablinks" onclick="displayContent(event, 'how-to-play')">How to Play</button>
+        </header>
+        <!-- Page content section-->
+        <section class="page-content">
+            <div id="welcome" class="tabcontent">
+                <h1 class="logo">Welcome to Parent Hero!</h1>
+                <img src="assets/images/placeholder.jpg" alt="placeholder image">
+                <p>If you are new here, pleace read the "About" and "How to play" sections of the page before playing the game.</p>
+                <button id="start" class="game-button">Start Game!</button>
+            </div>
+        </section>
+    </div>
 
 
 
