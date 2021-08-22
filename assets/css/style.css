@@ -6,6 +6,7 @@
     border: none;
 }
 
+/* Generel styles for index page */
 body {
     background-color: dimgrey;
     font-family: 'Press Start 2P', cursive;
@@ -15,4 +16,45 @@ body {
     width: 900px;
     margin: auto;
     background-color: slategrey;
+}
+
+/* style the tab bar */
+.tablinks {
+    font-family: inherit;
+    padding: 10px;
+    float: left;
+    background-color: slategrey;
+    border: 1px solid black;
+    border-top-left-radius: 20%;
+    border-top-right-radius: 20%;
+    border-bottom: 0;
+}
+
+.tablinks:hover {
+    background-color: darkslategray;
+}
+
+.active {
+    background-color: darkslategray;
+}
+
+/* Style for the page content that will be displayed using the tab-bar*/
+.page-content {
+    clear: both;
+    text-align: center;
+}
+
+.page-content button {
+    font-family: inherit;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.tabcontent {
+    margin-top: 40px;
+    display: inline-block;
+}
+
+.tabcontent img {
+    margin: 30px 0;
 }
