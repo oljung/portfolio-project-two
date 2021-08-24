@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Quicksand&display=swap');
 
 * {
     margin: 0;
@@ -53,8 +53,64 @@ body {
 .tabcontent {
     margin-top: 40px;
     display: inline-block;
+    width: 90%;
+}
+
+.tabcontent h1, .tabcontent h2 {
+    margin-bottom: 30px;
+}
+
+.tabcontent p {
+    margin-bottom: 20px;
+    margin-left: 10px;
+    text-align: justify;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.tabcontent > a {
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.tabcontent > a:hover {
+    color: darkslategray;
 }
 
 .tabcontent img {
     margin: 30px 0;
+}
+
+/* Styles the figure content and figcaptions for the about tab */
+
+.figure-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+figure > img {
+    height: 150px;
+    width: auto;
+    object-fit: contain;
+    max-width: 30%;
+    cursor: pointer;
+}
+
+figcaption {
+    font-family: 'Quicksand', sans-serif;
+}
+
+figcaption > a {
+    color: inherit;
+    text-decoration: none;
+}
+
+figcaption > a:hover {
+    color: darkslategray;
+}
+
+#welcome {
+    display: none;
 }
