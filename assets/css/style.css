@@ -98,6 +98,10 @@ figure > img {
     cursor: pointer;
 }
 
+figure > img:hover {
+    background-color: darkslategray;
+}
+
 figcaption {
     font-family: 'Quicksand', sans-serif;
 }
