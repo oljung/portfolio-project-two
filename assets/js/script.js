@@ -1,3 +1,10 @@
+// Wait for DOM content to load before running code
+
+document.addEventListener("DOMContentLoaded", function() {
+    //display default tab content
+    document.getElementById('defaultOpen').click();
+})
+
 function displayContent(event, tabName){
     //declare variables
     let i, tabcontent, tablinks;
