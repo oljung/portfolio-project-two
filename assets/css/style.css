@@ -65,6 +65,7 @@ body {
     margin-left: 10px;
     text-align: justify;
     font-family: 'Quicksand', sans-serif;
+    font-size: 120%;
 }
 
 .tabcontent > a {
@@ -115,6 +116,26 @@ figcaption > a:hover {
     color: darkslategray;
 }
 
+/* Styles the lists on the how to play tab*/
+
+li {
+    margin: 10px;
+    margin-bottom: 20px;
+}
+
+li  p {
+    font-family: inherit;
+}
+
+li > h3 {
+    margin-bottom: 40px;
+    font-size: 110%;
+}
+
 #welcome {
+    display: none;
+}
+
+#about {
     display: none;
 }
