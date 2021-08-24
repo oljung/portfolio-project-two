@@ -24,5 +24,5 @@ function displayContent(event, tabName){
     // Show the tab that was clicked
 
     document.getElementById(tabName).style.display = 'inline-block';
-    event.currentTartget.className += ' active';
+    event.currentTarget.className += ' active';
 }
