@@ -66,6 +66,7 @@ body {
     text-align: justify;
     font-family: 'Quicksand', sans-serif;
     font-size: 120%;
+    
 }
 
 .tabcontent > a {
@@ -81,6 +82,24 @@ body {
 
 .tabcontent img {
     margin: 30px 0;
+}
+
+/* Style social media links*/
+
+.social-media {
+    padding: 30px 0;
+    font-size: 200%;
+    background-color: darkslategray;
+    text-align: center;
+}
+
+.social-media > a {
+    color: inherit;
+    margin: 0 50px;   
+}
+
+.social-media > a:hover {
+    color: slategrey;
 }
 
 /* Styles the figure content and figcaptions for the about tab */
