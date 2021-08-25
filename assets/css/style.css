@@ -44,10 +44,20 @@ body {
     text-align: center;
 }
 
-.page-content button {
+.game-button {
     font-family: inherit;
     padding: 10px;
-    margin-top: 20px;
+    margin: 20px 0;
+    border: 5px solid darkslategray;
+    border-radius: 15%;
+    background-color: slategray;
+    cursor: pointer;
+}
+
+.game-button:hover {
+    border-color: black;
+    background-color: darkslategray;
+    color: slategrey;
 }
 
 .tabcontent {
