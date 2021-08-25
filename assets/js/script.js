@@ -5,6 +5,12 @@ document.addEventListener("DOMContentLoaded", function() {
     document.getElementById('defaultOpen').click();
 })
 
+/**
+ * 
+ * @param {contains information about what was clicked} event 
+ * @param {ID of the tab to display} tabName 
+ * Function used for displaying the correct content based on what tab was clicked. Will also set clicked tab as active and remove the currently displayed content
+ */
 function displayContent(event, tabName){
     //declare variables
     let i, tabcontent, tablinks;
