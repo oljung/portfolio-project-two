@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function() {
     document.getElementById('defaultOpen').click();
 
     //add eventlisteners to the images to enlarge
-    let images = document.getElementsByClassName('modalImg');
+    let images = document.getElementsByClassName('modal-image');
     for(let i = 0; i < images.length; i++){
         images[i].addEventListener('click', displayModal);
     }

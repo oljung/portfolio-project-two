@@ -180,7 +180,7 @@ li > h3 {
     background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
 }
 
-.modalImg {
+.modal-image {
     cursor: pointer;
 }
 
