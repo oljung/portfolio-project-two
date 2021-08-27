@@ -9,7 +9,34 @@
 </head>
 <body>
     <div class="container">
-
+        <!-- This window displays the location image -->
+        <div class="main-window">
+            <img src="assets/images/living-room.png" alt="image of a living room" class="main-image" id="main-image">
+        </div>
+        <!-- This is where the game commands are located -->
+        <div class="commands">
+            <button class="game-button complete-button">Complete Text</button>
+            <input type="checkbox" class="checkbox" id="auto-complete">
+            <label for="action">Action</label>
+            <input type="text" id="action" class="action-input">
+            <label for="target">Target</label>
+            <input type="text" id="target" class="action-input">
+        </div>
+        <div class="text-container">
+            <div class="narrator-text" id="narrator">
+                <p>Placeholder text</p>
+            </div>
+            <div class="inventory">
+                <p>Inventroy: <span id="inventroy">nothing</span></p>
+            </div>
+            <div class="locations">
+                <h4>Locations</h4>
+                <p class="living-room">Living Room</p>
+                <p class="kitchen">Kitchen</p>
+                <p class="girl-room">Girl's Room</p>
+                <p class="boy-room">Boy's Romm</p>
+            </div>
+        </div>
     </div>
 </body>
 </html>
