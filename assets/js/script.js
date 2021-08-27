@@ -3,6 +3,12 @@
 document.addEventListener("DOMContentLoaded", function() {
     //display default tab content
     document.getElementById('defaultOpen').click();
+
+    //add eventlisteners to the images to enlarge
+    let images = document.getElementsByClassName('modalImg');
+    for(let i = 0; i < images.length; i++){
+        images[i].addEventListener('click', displayModal);
+    }
 })
 
 /**
@@ -31,4 +37,23 @@ function displayContent(event, tabName){
 
     document.getElementById(tabName).style.display = 'inline-block';
     event.currentTarget.className += ' active';
+}
+
+/**
+ * Function used to display modal with an enlarged version of an image that has been clicked
+ */
+function displayModal(){
+    //get the modal
+    let modal = document.getElementById('myModal');
+    //get the modal image (the large image)
+    let modalImg = document.getElementsByClassName('modal-content')[0];
+    //display modal and set img src to the same as the image clicked
+    modal.style.display = 'block';
+    modalImg.src = this.src;
+
+    //add listener to the "close" button
+    let close = document.getElementsByClassName('close')[0]
+    close.onclick = function(){
+        modal.style.display = 'none';
+    }
 }

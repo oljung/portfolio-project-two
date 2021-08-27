@@ -127,9 +127,9 @@ hr {
 figure > img {
     height: 150px;
     width: auto;
+    min-width: 100px;
     object-fit: contain;
     max-width: 30%;
-    cursor: pointer;
 }
 
 figure > img:hover {
@@ -180,6 +180,10 @@ li > h3 {
     background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
 }
 
+.modalImg {
+    cursor: pointer;
+}
+
 /* Modal Content (Image) */
 .modal-content {
     margin: auto;
@@ -196,6 +200,7 @@ li > h3 {
     font-size: 40px;
     font-weight: bold;
     transition: 0.3s;
+    cursor: pointer;
 }
 
 /* 100% Modal Image Width on Smaller Screens */
