@@ -245,17 +245,39 @@ li > h3 {
 }
 
 .complete-button {
-    margin: 0;
+    margin: 5px 10px;
     float: left;
 }
 
 .checkbox {
     float: left;
     clear: left;
+    margin-top: 10px;
+    cursor: pointer;
 }
 
 .action-input {
     float: right;
     clear: right;
+    position: relative;
+    top: -45px;
+    background-color: slategrey;
+    border: darkslategray 2px solid;
+    border-radius: 5%;
+}
 
+.box-label {
+    float: left;
+    position: relative;
+    top: 60px;
+    left: -20%;
+    cursor: pointer;
+}
+
+.input-label {
+    float: right;
+    clear: right;
+    position: relative;
+    top: -45px;
+    margin: 5px 0;
 }
