@@ -238,7 +238,7 @@ li > h3 {
 .commands {
     width: 99%;
     border: dimgray solid 5px;
-    border-radius: 5%;
+    border-bottom: dimgray solid 3px;
     margin-left: auto;
     margin-right: auto;
     height: 100px;
@@ -280,4 +280,63 @@ li > h3 {
     position: relative;
     top: -45px;
     margin: 5px 0;
+}
+
+.text-container {
+    width: 99%;
+    height: 200px;
+    background-color: #1A2D2D;
+    border: dimgray solid 5px;
+    border-top: none;
+}
+
+.text-container p {
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.narrator-text {
+    width: 60%;
+    height: 190px;
+    text-align: justify;
+    background-color: #1A2D2D;
+    color: #B5BEC5;
+    float: left;
+    position: relative;
+    top: -20px;
+}
+
+.inventory {
+    width: 35%;
+    text-align: justify;
+    background-color: #1A2D2D;
+    color: #B5BEC5;
+    height: 45px;
+    float: right;
+    position: relative;
+    top: -40px;
+    border-left: dimgray solid 5px;
+    border-bottom: dimgray solid 5px;
+}
+
+.locations {
+    width: 35%;
+    text-align: justify;
+    background-color: #1A2D2D;
+    color: #B5BEC5;
+    height: 145px;
+    float: right;
+    position: relative;
+    top: -40px;
+    border-left: dimgray solid 5px;
+    border-top: dimgray solid 5px;
+}
+
+.locations > h3 {
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.locations > p {
+    margin-top: 10px;
 }
