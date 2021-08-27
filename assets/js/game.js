@@ -19,6 +19,14 @@ document.addEventListener("DOMContentLoaded", function() {
     
     //add event listener to complete text button
     document.getElementsByClassName('complete-button')[0].addEventListener('click', fillNarratorText);
+
+    //add event listener to the enter key
+    document.addEventListener('keyup', function(e) {
+        //check if Enter was pressed
+        if(e.key === 'Enter'){
+            readInput();
+        }
+    })
 })
 
 /**
@@ -69,4 +77,18 @@ function addText() {
 function fillNarratorText() {
     index = -1;
     document.getElementById('narrator').innerHTML = txt;
+}
+
+/**
+ * Function for reading input from user and handling that input, changing the game or displaying error message if needed
+ */
+function readInput(){
+    //get the input from action-input
+    let action = document.getElementById('action');
+
+    //get the input from target
+    let target = document.getElementById('target');
+    
+    console.log(action.value);
+    console.log(target.value);
 }
