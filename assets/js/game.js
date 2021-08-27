@@ -52,7 +52,9 @@ function setNarratorText(){
     index = 0;
     let room = document.getElementsByClassName('active')[0];
     if(room.id === 'living-room'){
-        txt = 'You are standing in the living room...'
+        txt = 'You are standing in the living room...';
+    } else if(room.id === 'kitchen') {
+        txt = 'You are standing in the kitchen';
     }
 }
 
@@ -89,6 +91,16 @@ function readInput(){
     //get the input from target
     let target = document.getElementById('target');
     
-    console.log(action.value);
-    console.log(target.value);
+    //determine what to do based on action value
+    switch(action.value) {
+        case 'move':
+            changeLocation(targer.value);
+    }
+}
+
+/**
+ * Function used to handling the move action
+ */
+function changeLocation(room) {
+    
 }
