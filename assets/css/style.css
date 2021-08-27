@@ -233,6 +233,7 @@ li > h3 {
     height: auto;
     max-height: 500px;
     object-fit: contain;
+    display: none;
 }
 
 .commands {
