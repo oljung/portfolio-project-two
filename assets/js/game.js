@@ -3,7 +3,10 @@
 let txt = "";
 //create the index variable, deciding if and what character to type to narrator box
 let index = 0;
-let speed = 100;
+//create a string for textTyper function
+let textToAdd = '';
+//create timer that handles textTyper function
+let timer;
 
 // Wait for DOM content to load before running code
 document.addEventListener("DOMContentLoaded", function() {
@@ -34,12 +37,15 @@ function displayNarratorText(){
     //reset the character counter
     index = 0;
     
+    //reset textToAdd string
+    textToAdd = '';
+
     //clear the narrator text box for new input
     document.getElementById('narrator').innerHTML = '';
     
     //get the checkbox to check its value
     let checkbox = document.getElementById('auto-complete');
-    
+    console.log(checkbox.checked);
     //determine status if checkbox
     if(checkbox.checked === true){
         fillNarratorText();
@@ -64,23 +70,22 @@ function setNarratorText(){
  * This funtion will type out the text one letter at the time, giving it a more retro feel.
  */
 function textTyper() {
-    timer = setInterval(addText, 100);
-}
-
-function addText() {
-    if(index >= 0 && index < txt.length){
-        textToAdd = txt;
-        document.getElementById('narrator').innerHTML += textToAdd[index];
+    if(index >= 0 && index < txt.length) {
+        document.getElementById('narrator').innerHTML += txt.charAt(index);
         index++;
+        setTimeout(textTyper, 100);
     }
 }
+
+/*function addText() {
+}*/
 
 /**
  * Function for instantly filling hte narrator text box
  */
 function fillNarratorText() {
     //stops the texttyper being called
-    clearInterval(timer);
+    index = -1;
     //fills box with txt string
     document.getElementById('narrator').innerHTML = txt;
 }
