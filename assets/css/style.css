@@ -341,3 +341,7 @@ li > h3 {
 .locations > p {
     margin-top: 10px;
 }
+
+.active-location {
+    text-decoration: underline;
+}
