@@ -3,8 +3,6 @@
 let txt = "";
 //create the index variable, deciding if and what character to type to narrator box
 let index = 0;
-//create a string for textTyper function
-let textToAdd = '';
 //create timer that handles textTyper function
 let timer;
 
@@ -69,7 +67,7 @@ function setNarratorText(){
 /**
  * This funtion will type out the text one letter at the time, giving it a more retro feel.
  */
-function textTyper() {
+function textTyper() { // source: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_typewriter
     if(index >= 0 && index < txt.length) {
         document.getElementById('narrator').innerHTML += txt.charAt(index);
         index++;
