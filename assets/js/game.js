@@ -61,6 +61,10 @@ function setNarratorText(){
         txt = 'You are standing in the living room...';
     } else if(room.id === 'kitchen') {
         txt = 'You are standing in the kitchen';
+    } else if(room.id === 'girl-room') {
+        txt = "You are standing in the girl's room";
+    } else if(room.id === 'boy-room') {
+        txt = "You are standing in the boy's room";
     }
 }
 
@@ -124,6 +128,12 @@ function changeLocation(room) {
         case 'kitchen':
             roomChange(room);
             break;
+        case 'girl room':
+            roomChange('girl-room');
+            break;
+        case 'boy room':
+            roomChange('boy-room');
+            break;
         default:
             txt = 'That is not a valid location';
             displayNarratorText();
@@ -144,7 +154,8 @@ function roomChange(targetRoom) {
     //remove "active" from the location in the locations text box
     let locations = document.getElementsByClassName('room');
     for(let i = 0; i < locations.length; i++) {
-        locations[i].className = locations[i].className.replace('active-location', '');
+        locations[i].style.textDecoration = 'none'
+        
     }
 
     //display the correct room and give it active-room class
@@ -154,7 +165,7 @@ function roomChange(targetRoom) {
 
     //change the active location in the text box
     let activeLocation = document.getElementsByClassName(targetRoom)[0];
-    activeLocation.className += ' active-location';
+    activeLocation.style.textDecoration = 'underline';
 
     //set text and display it
     setNarratorText();
