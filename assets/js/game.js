@@ -11,6 +11,7 @@ let spouse = true;
 let tablet = false;
 let needGroceries = false;
 let light = false;
+let findFluffy = false;
 
 
 // Wait for DOM content to load before running code
@@ -64,13 +65,13 @@ function displayNarratorText(){
 function setNarratorText(){
     let room = document.getElementsByClassName('active-room')[0];
     if(room.id === 'living-room'){
-        txt = 'You are standing in the living room...';
+        txt = 'You are standing in the living room, just minutes before your favourite "young people on a beach drama" show starts. There is an awful noice coming from the girl, you need to sort this or risk missing crucial information in the shows triangle drama...';
     } else if(room.id === 'kitchen') {
-        txt = 'You are standing in the kitchen';
+        txt = 'You are standing in the kitchen, the fridge is giving off a soft humming noice and the smell of fried bacon still lingers from hte lunch you just had';
     } else if(room.id === 'girl-room') {
-        txt = "You are standing in the girl's room";
+        txt = "You are standing in fron of the girl's room, where pandemonium is taking place. Apparently the girl has lost something, and until it is recovered you will all suffer...";
     } else if(room.id === 'boy-room') {
-        txt = "You are standing in the boy's room";
+        txt = "You are standing in fron of the boy's room, where an extremely angry boy is sitting on his bed. He seems to have just had a fight with both his sister and the other parent and is currently not allowing visitors";
     }
 }
 
@@ -118,6 +119,11 @@ function readInput(){
             break;
         case 'search':
             search(target.value);
+            break;
+        case 'pick up':
+            pickUpItem(target.value);
+            //checks if the player is holding an item that gives off light
+            checkLight();
             break;
         default:
             txt = 'That is not a valid action';
@@ -242,4 +248,89 @@ function search(item) {
         txt = `You can not search that, either you are in the wrong location, or there is nothing special about "${item}"`;
     }
     displayNarratorText();
+}
+
+/**
+ * This function handles all the item pick ups depending on what room the player is in
+ * @param {the item the player is attempting to pick up} item 
+ */
+function pickUpItem(item) {
+    //get the value of the inventory text box
+    let inventory = document.getElementById('inventory');
+    
+    //get information about the curront location
+    room = document.getElementsByClassName('active-room')[0];
+
+    //if the player is not holding an item
+    if(inventory.innerText === 'empty') {
+        //different outcomes based on location
+        switch(room.id) {
+            case 'living-room':
+                //trying to pick up tablet
+                if(item === 'tablet') {
+                    //if spouse is present
+                    if(spouse) {
+                        txt = 'Your spouse looks up at you as you try to grab the tablet: "I thought we agreed his time on that thing was out for today?" The tablet is staying where it is';
+                    } else {
+                        txt = 'With the spouse gone, there is nothing stopping you from taking the tablet to use for whatever you find suitable.'
+                        inventory.innerText = item;
+                    }
+                } else if(item === 'doll') {
+                    txt = "You pick up what used to be the girl's favourite doll. Perhaps this will calm her down?";
+                    inventory.innerText = item;
+                } else if(item === 'phone') {
+                    if(spouse) {
+                        txt = "As you try to grab the phone from your spouse's hands, your spouse grips the phone harder. In your contest for the phone it slips, hits the floor and breaks. Instead of watching half-naked, attractive young people on a beach you aren now shopping for a phone.";
+                        //gameOver();
+                    } else {
+                        txt = 'You pick up the phone, nearly blinding yourself from the intense shine of the flashlight function';
+                        inventory.innerText = item;
+                    }
+                } else {
+                    txt = 'You are unable to locate that item here';
+                }
+                break;
+            case 'boy-room':
+                //if boy is distracted
+                if(tablet) {
+                    //trying to pick up fluffy
+                    if(item === 'fluffy') {
+                        //the player has found fluffy
+                        if(findFluffy) {
+                            txt = "Finally, you hold the hideous creature known as fluffy in your hands. If this doesn't calm the girl down, nothing will";
+                            inventory.innerText = item;
+                        } else { //not located fluffy
+                            txt = "You still havn't located fluffy, so obviously you can't pick it up...";
+                        }
+                    } else if (item === 'sunglasses') {
+                        'These were some damn cool shades! Hopefully they can still be salvaged, you think to yourself as you make a mental note not to leave expensive stuff around the house';
+                        inventory.innerText = item;
+                    } else {
+                        txt = 'You are unable to locate that item here';
+                    }
+                } else { //boy won't let you in
+                    txt = 'There is just no way to enter that room right now and live to tell the tale';
+                }
+                break;
+            default:
+                txt = 'There is nothin here to pick up';
+        }
+    } else { //inventory is not empty, no items will be picked up
+        txt = 'You are currently holding an item. You must drop that first before you can pick up a new one';
+    }
+    displayNarratorText();
+}
+
+/**
+ * This function checks if the player is holding the phone, thus having light to see in dark rooms
+ */
+function checkLight() {
+    //get the inventory element
+    let inventory = document.getElementById('inventory');
+    //check the value of inventory's text
+    if(inventory.innerText === 'phone') {
+        light = true;
+    } else {
+        inventory = false;
+    }
 }
