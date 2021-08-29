@@ -111,17 +111,18 @@ function readInput(){
     
     //change all digits to lower case, in case user used capital letters somewhere
     let actionLower = action.value.toLowerCase();
+    let targetLower = target.value.toLowerCase();
     
     //determine what to do based on action value
     switch(actionLower) {
         case 'move':
-            changeLocation(target.value);
+            changeLocation(targetLower);
             break;
         case 'search':
-            search(target.value);
+            search(targetLower);
             break;
         case 'pick up':
-            pickUpItem(target.value);
+            pickUpItem(targetLower);
             //checks if the player is holding an item that gives off light
             checkLight();
             break;
