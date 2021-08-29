@@ -10,7 +10,6 @@ let timer;
 let spouse = true;
 let tablet = false;
 let needGroceries = false;
-let light = false;
 let findFluffy = false;
 
 
@@ -123,8 +122,9 @@ function readInput(){
             break;
         case 'pick up':
             pickUpItem(targetLower);
-            //checks if the player is holding an item that gives off light
-            checkLight();
+            break;
+        case 'give':
+            giveItem(targetLower);
             break;
         default:
             txt = 'That is not a valid action';
@@ -237,8 +237,10 @@ function search(item) {
         }
     } else if(item === 'closet' && room.id === 'boy-room') {
         if(tablet) { //the boy is distracted
+            //check if player has a "light"
+            light = checkLight();
             if(light) {
-                txt = 'The phone gives off sufficient light to search the closet, under some towels you find "fluffy" somewhat beaten up, but you hope the girl will be happy regardless';
+                txt = 'The phone gives off sufficient light to search the closet. Under some towels you find "fluffy" somewhat beaten up, but you hope the girl will be happy regardless';
             } else { //if not light
                 txt = 'The closet is way to dark, and you curse yourselft for not changing that lightbuld ages ago, as you know you should have';
             }
@@ -259,7 +261,7 @@ function pickUpItem(item) {
     //get the value of the inventory text box
     let inventory = document.getElementById('inventory');
     
-    //get information about the curront location
+    //get information about the current location
     room = document.getElementsByClassName('active-room')[0];
 
     //if the player is not holding an item
@@ -326,12 +328,64 @@ function pickUpItem(item) {
  * This function checks if the player is holding the phone, thus having light to see in dark rooms
  */
 function checkLight() {
+    let light = false;
     //get the inventory element
     let inventory = document.getElementById('inventory');
     //check the value of inventory's text
     if(inventory.innerText === 'phone') {
         light = true;
-    } else {
-        inventory = false;
     }
+    return light;
+}
+
+/**
+ * This function is used to handle when a player tries to give an item. It will have different outcomes based on location and item in question
+ * @param {item to give, if possible} item 
+ */
+function giveItem(item) {
+    //get information about current item
+    let inventory = document.getElementById('inventory').innerText;
+
+    //get information about the current location
+    room = document.getElementsByClassName('active-room')[0];
+    
+    //check if the player is carrying an item
+    if(inventory !== 'empty') { //inventory is not empty determine what happens based on location and item to give
+        if(item === inventory) {
+            //handle the rooms differently
+            switch(room.id) {
+                case 'girl-room':
+                    if(item === 'fluffy') {
+                        txt = "The girl's face lits up in excitement as she reaches for the monstrosity. The shrieking is abruptly ended as the girl hugs her fluffy. And just in time for the alcohol infused drama on the beach to begin";
+                        //gameWon();
+                    } else {
+                        txt = `The girl gives off an even higher shriek and throws the ${item} at your face. You hear a crunching noise as your nose breaks and you realize you will be spending the night at the ER rather than watching those young people get into trouble`;
+                        //gameOver();
+                    }
+                    break;
+                case 'boy-room':
+                    if(item === 'tablet') {
+                        txt = "The boy's sullen expression lights up as he sees his tablet. He quickly grabs it then hides under the covers and all left to identify him is a mound on the bed giving of gaming sounds";
+                        tablet = true;
+                    } else {
+                        txt = `The boy doesn't want the ${item}. He refuses to take it and glares angrily at you`;
+                    }
+                    break;
+                case 'living room':
+                    if(spouse) {
+                        txt = 'Your spouse is does not want anything from you at the moment';
+                    } else {
+                        txt = 'There is no one here to give an item to...'
+                    }
+                    break;
+                default:
+                    txt = 'There is no one here to give an item to...'
+            }
+        } else { //item to give does not match inventory item
+            txt = 'You are not currently holding that item';
+        }
+    } else { //inventory is emtpy
+        txt = 'You have no item to give';
+    }
+    displayNarratorText();
 }
