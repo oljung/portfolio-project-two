@@ -44,20 +44,24 @@
     </div>
     <!-- This will display when player get game over-->
     <div class="game-over" id="game-lost">
-        <img src="assets/images/game-over.png" alt="game over screen">
-        <button id="game-lost-button" class="game-button" onclick="location.href='game.html'">Try Again</button>
+        <div class="game-over-content">
+            <img src="assets/images/game-over.png" alt="game over screen">
+            <button id="game-lost-button" class="game-button" onclick="location.href='game.html'">Try Again</button>
+        </div>
     </div>
     <!-- This will display when the player wins the game -->
     <div class="game-over" id="game-won">
-        <div class="game-won-content">
+        <div class="game-over-content">
             <h1>CONGRATULATIONS!</h1>
             <h4>You have successfully navigate the dangers of parenthood!</h4>
             <h5>Now you can finally sit down, relax and watch those gorgeous idiots ruin the day for each other</h5>
             <h3>To be continued...</h3>
         </div>
-        <p>Click play again to start over, or home to return to start page</p>
-        <button id="game-won-button" class="game-button" onclick="location.href='game.html'">Play Again?</button>
-        <button id="home-button" class="game-button" onclick="location.href='index.html'">Home</button>
+        <div class="buttons">
+            <p>Click play again to start over, or home to return to start page</p>
+            <button id="game-won-button" class="game-button" onclick="location.href='game.html'">Play Again?</button>
+            <button id="home-button" class="game-button" onclick="location.href='index.html'">Home</button>
+        </div>
     </div>
 
     <script src="assets/js/game.js"></script>
