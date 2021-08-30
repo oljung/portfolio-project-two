@@ -33,6 +33,11 @@ document.addEventListener("DOMContentLoaded", function() {
             readInput();
         }
     })
+    //add event listeners to the inputs clearing the text on focus
+    let inputs = document.getElementsByClassName('action-input');
+    for(let i = 0; i < inputs.length; i++) {
+        inputs[i].onfocus = function(){this.value = ''};
+    }
 })
 
 /**
@@ -247,6 +252,7 @@ function search(item) {
             light = checkLight();
             if(light) {
                 txt = 'The phone gives off sufficient light to search the closet. Under some towels you find "fluffy" somewhat beaten up, but you hope the girl will be happy regardless';
+                findFluffy = true;
             } else { //if not light
                 txt = 'The closet is way to dark, and you curse yourselft for not changing that lightbuld ages ago, as you know you should have';
             }
