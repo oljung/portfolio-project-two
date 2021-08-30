@@ -69,13 +69,13 @@ function displayNarratorText(){
 function setNarratorText(){
     let room = document.getElementsByClassName('active-room')[0];
     if(room.id === 'living-room'){
-        txt = 'You are standing in the living room, just minutes before your favourite "young people on a beach drama" show starts. There is an awful noice coming from the girl, you need to sort this or risk missing crucial information in the shows triangle drama...';
+        txt = 'You are standing in the living room, just minutes before your favourite "young people on a beach drama" show starts. There is an awful noise coming from the girl in the next room, you need to sort this or risk missing crucial information in the shows triangle drama...';
     } else if(room.id === 'kitchen') {
         txt = 'You are standing in the kitchen, the fridge is giving off a soft humming noice and the smell of fried bacon still lingers from hte lunch you just had';
     } else if(room.id === 'girl-room') {
-        txt = "You are standing in fron of the girl's room, where pandemonium is taking place. Apparently the girl has lost something, and until it is recovered you will all suffer...";
+        txt = "You are standing in front of the girl's room, where pandemonium is taking place. Apparently the girl has lost something, and until it is recovered you will all suffer...";
     } else if(room.id === 'boy-room') {
-        txt = "You are standing in fron of the boy's room, where an extremely angry boy is sitting on his bed. He seems to have just had a fight with both his sister and the other parent and is currently not allowing visitors";
+        txt = "You are standing in front of the boy's room, where an extremely angry boy is sitting on his bed. He seems to have just had a fight with both his sister and the other parent and is currently not allowing visitors";
     }
 }
 
@@ -211,7 +211,7 @@ function search(item) {
             case 'living-room':
             //if spouse is still present    
             if(spouse) {
-                    txt = "Your spouse is sitting on the couch scrolling on the phone. On the left side on the same couch is the boy's tablet and underneath the couch a doll is poking out its head";
+                    txt = "Your spouse is sitting on the couch scrolling on the phone. On the left side of the same couch is the boy's tablet and underneath the couch a doll is poking out its head";
                 } else {
                     txt = "Your spouse has left to shop for groceries and has vacated the couch, leaving only a pile of blankets."
                 }
@@ -242,7 +242,7 @@ function search(item) {
         }
     } else if(item === 'blankets' && room.id === 'living-room') {
         if(spouse) {
-            txt = 'Your spouse is cuddled up in those blankets and is not to keen on you rummaging about';
+            txt = 'Your spouse is cuddled up nicely in those blankets and is not to keen on you rummaging about';
         } else {
             txt = 'The blankets are still warm, and after searching through then you find the phone your spouse left for some reason, with the flashlight mode on';
         }
@@ -254,13 +254,13 @@ function search(item) {
                 txt = 'The phone gives off sufficient light to search the closet. Under some towels you find "fluffy" somewhat beaten up, but you hope the girl will be happy regardless';
                 findFluffy = true;
             } else { //if not light
-                txt = 'The closet is way to dark, and you curse yourselft for not changing that lightbuld ages ago, as you know you should have';
+                txt = 'The closet is way to dark, and you curse yourself for not changing that lightbuld ages ago, as you know you should have';
             }
         } else { //boy is not distracted
             txt = 'The boy refuses to let you enter the room, not even to search the closet';
         }
     } else { //not a valid item to search
-        txt = `You can not search that, either you are in the wrong location, or there is nothing special about "${item}"`;
+        txt = `You can not search that, either you are in the wrong location, or there is nothing special about it, or "${item}" simply doesn't exist`;
     }
     displayNarratorText();
 }
@@ -368,7 +368,7 @@ function giveItem(item) {
             switch(room.id) {
                 case 'girl-room':
                     if(item === 'fluffy') {
-                        txt = "The girl's face lits up in excitement as she reaches for the monstrosity. The shrieking is abruptly ended as the girl hugs her fluffy. And just in time for the alcohol infused drama on the beach to begin";
+                        txt = "The girl's face lights up in excitement as she reaches for the monstrosity. The shrieking is abruptly ended as the girl hugs her fluffy. And just in time for the alcohol infused drama on the beach to begin";
                         inventory.innerText = 'empty';
                         //gameWon();
                     } else {
@@ -379,7 +379,7 @@ function giveItem(item) {
                     break;
                 case 'boy-room':
                     if(item === 'tablet') {
-                        txt = "The boy's sullen expression lights up as he sees his tablet. He quickly grabs it then hides under the covers and all left to identify him is a mound on the bed giving of gaming sounds";
+                        txt = "The boy's sullen expression lights up as he sees his tablet. He quickly grabs it then hides under the covers and all that is left to identify him is a mound on the bed giving of gaming sounds";
                         inventory.innerText = 'empty';
                         tablet = true;
                     } else {
@@ -388,7 +388,7 @@ function giveItem(item) {
                     break;
                 case 'living room':
                     if(spouse) {
-                        txt = 'Your spouse is does not want anything from you at the moment';
+                        txt = 'Your spouse does not want anything from you at the moment';
                     } else {
                         txt = 'There is no one here to give an item to...'
                     }
@@ -443,7 +443,7 @@ function talkTo(character) {
                 if(character === 'spouse') { //player tries to talk to spouse
                     //check if player knows groceries are needed
                     if(needGroceries) {
-                        txt = 'As you mention there are no groceries, your spouse finally stop scrolling the phone, offers up plenty of excuses and leaves for the supermarket';
+                        txt = 'As you mention there are no groceries, your spouse finally stops scrolling the phone, offers up plenty of excuses and leaves for the supermarket';
                         spouse = false;
                     } else {
                         txt = 'Your spouse is scrolling on the phone with deep concentration, mostly humming in response to anything you say';
@@ -468,6 +468,8 @@ function talkTo(character) {
                 } else { //boy does not have tablet
                     txt = 'The boy looks at you with fire in his eyes, and anything you say is met with the mumbling of "I want my tablet!"';
                 }
+            } else {
+                txt = `${character} is not here, you can only talk to someone who is present`
             }
             break;
         default:
