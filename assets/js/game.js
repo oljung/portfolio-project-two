@@ -11,6 +11,7 @@ let spouse = true;
 let tablet = false;
 let needGroceries = false;
 let findFluffy = false;
+let gameEnd = false;
 
 
 // Wait for DOM content to load before running code
@@ -33,6 +34,7 @@ document.addEventListener("DOMContentLoaded", function() {
             readInput();
         }
     })
+
     //add event listeners to the inputs clearing the text on focus
     let inputs = document.getElementsByClassName('action-input');
     for(let i = 0; i < inputs.length; i++) {
@@ -56,7 +58,7 @@ function displayNarratorText(){
     //get the checkbox to check its value
     let checkbox = document.getElementById('auto-complete');
     //determine status if checkbox
-    if(checkbox.checked === true){
+    if(checkbox.checked === true || gameEnd){
         fillNarratorText();
     } else {
         textTyper();
@@ -296,7 +298,7 @@ function pickUpItem(item) {
                 } else if(item === 'phone') {
                     if(spouse) {
                         txt = "As you try to grab the phone from your spouse's hands, your spouse grips the phone harder. In your contest for the phone it slips, hits the floor and breaks. Instead of watching half-naked, attractive young people on a beach you aren now shopping for a phone.";
-                        //gameOver();
+                        gameOver();
                     } else {
                         txt = 'You pick up the phone, nearly blinding yourself from the intense shine of the flashlight function';
                         inventory.innerText = item;
@@ -370,11 +372,11 @@ function giveItem(item) {
                     if(item === 'fluffy') {
                         txt = "The girl's face lights up in excitement as she reaches for the monstrosity. The shrieking is abruptly ended as the girl hugs her fluffy. And just in time for the alcohol infused drama on the beach to begin";
                         inventory.innerText = 'empty';
-                        //gameWon();
+                        gameWon();
                     } else {
                         txt = `The girl gives off an even higher shriek and throws the ${item} at your face. You hear a crunching noise as your nose breaks and you realize you will be spending the night at the ER rather than watching those young people get into trouble`;
                         inventory.innerText = 'empty';
-                        //gameOver();
+                        gameOver();
                     }
                     break;
                 case 'boy-room':
@@ -476,4 +478,18 @@ function talkTo(character) {
             txt = "There is no one here to talk to and while some find talking to inanimate objects endearing, it really isn't";
     }
     displayNarratorText();
+}
+
+function gameOver() {
+    gameEnd = true;
+    setTimeout(function() {
+        document.getElementById('game-lost').style.display = 'block';
+    }, 10000);
+}
+
+function gameWon() {
+    gameEnd = true;
+    setTimeout(function() {
+        document.getElementById('game-won').style.display = 'block';
+    }, 10000)
 }
