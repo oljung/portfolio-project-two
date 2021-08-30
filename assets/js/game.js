@@ -129,6 +129,9 @@ function readInput(){
         case 'drop':
             dropItem(targetLower);
             break;
+        case 'talk to':
+            talkTo(targetLower);
+            break;
         default:
             txt = 'That is not a valid action';
             displayNarratorText();
@@ -147,10 +150,10 @@ function changeLocation(room) {
         case 'kitchen':
             roomChange(room);
             break;
-        case 'girl room':
+        case "girl's room":
             roomChange('girl-room');
             break;
-        case 'boy room':
+        case "boy's room":
             roomChange('boy-room');
             break;
         default:
@@ -350,7 +353,7 @@ function giveItem(item) {
     let inventory = document.getElementById('inventory');
 
     //get information about the current location
-    room = document.getElementsByClassName('active-room')[0];
+    let room = document.getElementsByClassName('active-room')[0];
     
     //check if the player is carrying an item
     if(inventory.innerText !== 'empty') { //inventory is not empty determine what happens based on location and item to give
@@ -414,6 +417,55 @@ function dropItem(item) {
         } else { //user input does not match item in inventory
             txt = `You are not holding ${item}. You can't drop something you don't have`; 
         }
+    }
+    displayNarratorText();
+}
+
+/**
+ * Function for handling the talk to action, giving different results based on who is present in the location
+ * @param {teh character to talk to} character 
+ */
+function talkTo(character) {
+    //get current location
+    let room = document.getElementsByClassName('active-room')[0];
+    //handle cases for room.id
+    switch(room.id) {
+        case 'living-room':
+            if(!spouse) {//if spouse is not present
+                txt = "There is no one here to talk to and while some find talking to inanimate objects endearing, it really isn't";
+            } else { //spouse is still present
+                if(character === 'spouse') { //player tries to talk to spouse
+                    //check if player knows groceries are needed
+                    if(needGroceries) {
+                        txt = 'As you mention there are no groceries, your spouse finally stop scrolling the phone, offers up plenty of excuses and leaves for the supermarket';
+                        spouse = false;
+                    } else {
+                        txt = 'Your spouse is scrolling on the phone with deep concentration, mostly humming in response to anything you say';
+                    }
+                } else {//the player tries to talk to someone other than spouse
+                    txt = `${character} is not here, you can only talk to someone who is present`
+                }
+            }
+            break;
+        case 'girl-room':
+            if(character === 'girl') {
+                txt = "The girl is to upset and doesn't even notice you trying to talk to her";
+            } else {//tries to talk to someone who isn't there
+                txt = `${character} is not here, you can only talk to someone who is present`
+            }
+            break;
+        case 'boy-room':
+            if(character === 'boy') {
+                //check if boy has tablet
+                if(tablet) {
+                    txt = 'The boy is to focused on the games on his tablet to even notice you';
+                } else { //boy does not have tablet
+                    txt = 'The boy looks at you with fire in his eyes, and anything you say is met with the mumbling of "I want my tablet!"';
+                }
+            }
+            break;
+        default:
+            txt = "There is no one here to talk to and while some find talking to inanimate objects endearing, it really isn't";
     }
     displayNarratorText();
 }
