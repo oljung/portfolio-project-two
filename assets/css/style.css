@@ -356,6 +356,7 @@ li > h3 {
     top: 0;
     left: 0;
     z-index: 1;
+    display: none;
 }
 
 .game-over-content > img {
@@ -369,7 +370,7 @@ li > h3 {
     margin: auto;
     text-align: center;
     color: slategrey;
-    display: none;
+    
 }
 
 .game-over-content h1,
