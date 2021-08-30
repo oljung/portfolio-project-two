@@ -345,3 +345,42 @@ li > h3 {
 .active-location {
     text-decoration: underline;
 }
+
+/* styles the game over screens */
+
+.game-over {
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.game-over-content > img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.game-over-content {
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    color: slategrey;
+    display: none;
+}
+
+.game-over-content h1,
+.game-over-content h3,
+.game-over-content h4,
+.game-over-content h5 {
+    margin-top: 50px;
+}
+
+.buttons {
+    color: slategrey;
+    margin-top: 50px;
+    text-align: center;
+}
