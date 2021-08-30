@@ -231,7 +231,7 @@ li > h3 {
 .main-image {
     width: 100%;
     height: auto;
-    max-height: 500px;
+    max-height: 400px;
     object-fit: contain;
     display: none;
 }
