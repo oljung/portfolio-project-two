@@ -126,6 +126,9 @@ function readInput(){
         case 'give':
             giveItem(targetLower);
             break;
+        case 'drop':
+            dropItem(targetLower);
+            break;
         default:
             txt = 'That is not a valid action';
             displayNarratorText();
@@ -233,7 +236,7 @@ function search(item) {
         if(spouse) {
             txt = 'Your spouse is cuddled up in those blankets and is not to keen on you rummaging about';
         } else {
-            txt = 'The blankets are still warm, and after searching through then you find your the phone your spouse left for some reason, with the flashlight mode on';
+            txt = 'The blankets are still warm, and after searching through then you find the phone your spouse left for some reason, with the flashlight mode on';
         }
     } else if(item === 'closet' && room.id === 'boy-room') {
         if(tablet) { //the boy is distracted
@@ -344,28 +347,31 @@ function checkLight() {
  */
 function giveItem(item) {
     //get information about current item
-    let inventory = document.getElementById('inventory').innerText;
+    let inventory = document.getElementById('inventory');
 
     //get information about the current location
     room = document.getElementsByClassName('active-room')[0];
     
     //check if the player is carrying an item
-    if(inventory !== 'empty') { //inventory is not empty determine what happens based on location and item to give
-        if(item === inventory) {
+    if(inventory.innerText !== 'empty') { //inventory is not empty determine what happens based on location and item to give
+        if(item === inventory.innerText) {
             //handle the rooms differently
             switch(room.id) {
                 case 'girl-room':
                     if(item === 'fluffy') {
                         txt = "The girl's face lits up in excitement as she reaches for the monstrosity. The shrieking is abruptly ended as the girl hugs her fluffy. And just in time for the alcohol infused drama on the beach to begin";
+                        inventory.innerText = 'empty';
                         //gameWon();
                     } else {
                         txt = `The girl gives off an even higher shriek and throws the ${item} at your face. You hear a crunching noise as your nose breaks and you realize you will be spending the night at the ER rather than watching those young people get into trouble`;
+                        inventory.innerText = 'empty';
                         //gameOver();
                     }
                     break;
                 case 'boy-room':
                     if(item === 'tablet') {
                         txt = "The boy's sullen expression lights up as he sees his tablet. He quickly grabs it then hides under the covers and all left to identify him is a mound on the bed giving of gaming sounds";
+                        inventory.innerText = 'empty';
                         tablet = true;
                     } else {
                         txt = `The boy doesn't want the ${item}. He refuses to take it and glares angrily at you`;
@@ -386,6 +392,28 @@ function giveItem(item) {
         }
     } else { //inventory is emtpy
         txt = 'You have no item to give';
+    }
+    displayNarratorText();
+}
+
+/**
+ * This function will let the user drop whatever item is carried
+ * @param {the item to drop} item 
+ */
+function dropItem(item) {
+    //get information on inventory status
+    let inventory = document.getElementById('inventory');
+
+    //check inventory
+    if(inventory.innerText === 'empty') {
+        txt = ' You are not carrying anything and have nothing to drop';
+    } else { //user has an item
+        if(item === inventory.innerText) { //if user input is the same as item in inventory
+            txt = `You drop the ${item} on the ground. Don't worry, if you need it again it will have magically reappeared where you first found it.`;
+            inventory.innerHTML = 'empty';
+        } else { //user input does not match item in inventory
+            txt = `You are not holding ${item}. You can't drop something you don't have`; 
+        }
     }
     displayNarratorText();
 }
