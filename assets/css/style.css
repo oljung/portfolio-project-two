@@ -149,6 +149,12 @@ figcaption > a:hover {
     color: darkslategray;
 }
 
+.how-to-play-image {
+    width: 90%;
+    height: auto;
+    object-fit: contain;
+}
+
 /* Styles the lists on the how to play tab*/
 
 li {

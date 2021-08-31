@@ -68,7 +68,7 @@
             <!-- How to play tab content-->
             <div id="how-to-play" class="tabcontent">
                 <h1>How to Play</h1>
-                <img src="assets/images/placeholder.jpg" alt="placeholder for how to play" class="modal-image">
+                <img src="assets/images/how-to-play.jpg" alt="Image of the game screen with numbers indicating " class="modal-image how-to-play-image">
                 <p>The game screen may be daunting at first, but it is not as complicated as it looks. Just follow these steps and you will be fine. 
                     Below you will find a detailed explanation of what you will see on the screen, as well as a step by step on how to play</p>
                 <ul>
@@ -79,13 +79,16 @@
                                 Not all you see is interactable, and things of import may not show on the screen, always refer to the narrator for what to interact with</li>
                             <li>Narrator text box: This box will display the information given to you by the game's narrator</li>
                             <li>Inventory box: Shows you what item you are currently holding</li>
-                            <li>Action input</li>
-                            <li>Target input</li>
+                            <li>Locations text box: Shows you valid locations to move to and highlights the one you are currently in</li>
+                            <li>Action input: Your action goes into this textbox, see below for valid inputs</li>
+                            <li>Target input: Here is where you write what you want to use your action on</li>
+                            <li>Complete text: Click this button to disable the textyping and display the full message at once</li>
+                            <li>Auto Complete: Check this box to always display the full message at once</li>
                         </ol>
                     </li>
                     <li>
                         <h3>Playing the game</h3>
-                        <p>In order to play the game, you must give the game commands. This is done using the two action inputs. Write what actoin you want to use in the action input (4) and then a target in the target input (5)
+                        <p>In order to play the game, you must give the game commands. This is done using the two action inputs. Write what action you want to use in the action input (4) and then a target in the target input (5)
                             The actions you can take are (use only lower case letters for actions):
                         </p>
                         <ul>
@@ -96,6 +99,15 @@
                             <li>drop - drops the item you are currently carrying</li>
                             <li>talk to - allows you to talk to the target, if the target can hear you and is able to respond</li>
                         </ul>
+                        <h3>Step by step</h3>
+                        <p>Keep these steps in mind when playing the game, it will help you progress</p>
+                        <ol>
+                            <li>Read the narrator text, it may contain important information</li>
+                            <li>Decide what action you want to use. Hint: the search action will often provide additional useful information</li>
+                            <li>Execute action using the action inputs (4 and 5)</li>
+                            <li>Observe the effect of your action by reading the narrator text</li>
+                            <li>Analyze the information you have so far to decide on your next action</li>
+                        </ol>
                     </li>
                 </ul>
                 <button id="start" class="game-button" onclick="location.href='game.html'">Start Game!</button>
