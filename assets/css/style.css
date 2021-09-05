@@ -424,6 +424,7 @@ li > h3 {
 
     .execute-button {
         margin-top: 6vh;
+        font-size: small;
     }
 
     .narrator-box {
