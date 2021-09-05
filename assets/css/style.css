@@ -235,14 +235,16 @@ li > h3 {
     border: dimgray solid 5px;
     border-radius: 10%;
     margin: auto;
+    height: 40vh;
 }
 
 .main-image {
     width: 100%;
     height: auto;
-    max-height: 400px;
+    max-height: 95%;
     object-fit: contain;
     display: none;
+    margin-top: 1vh;
 }
 
 .commands {
@@ -251,49 +253,49 @@ li > h3 {
     border-bottom: dimgray solid 3px;
     margin-left: auto;
     margin-right: auto;
-    height: 100px;
-}
-
-.checkbox {
-    float: left;
-    clear: left;
-    margin-top: 10px;
-    cursor: pointer;
+    height: 15vh;
 }
 
 .action-input {
     float: right;
     clear: right;
     position: relative;
-    top: -45px;
     background-color: slategrey;
     border: darkslategray 2px solid;
     border-radius: 5%;
-}
-
-.box-label {
-    float: left;
-    position: relative;
-    top: 60px;
-    left: -20%;
-    cursor: pointer;
 }
 
 .input-label {
     float: right;
     clear: right;
     position: relative;
-    top: -45px;
     margin: 5px 0;
 }
 
 .text-container {
     width: 99%;
-    height: 200px;
+    height: 30vh;
     background-color: #1A2D2D;
     border: dimgray solid 5px;
     border-top: none;
 }
+
+.checkbox-container {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.box-label {
+    cursor: pointer;
+}
+
+.checkbox {
+    float: right;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
 
 .text-container p {
     margin-top: 10px;
@@ -302,13 +304,12 @@ li > h3 {
 
 .narrator-text {
     width: 60%;
-    height: 190px;
+    height: 100%;
     text-align: justify;
     background-color: #1A2D2D;
     color: #B5BEC5;
     float: left;
     position: relative;
-    top: -20px;
 }
 
 .inventory {
@@ -316,10 +317,9 @@ li > h3 {
     text-align: justify;
     background-color: #1A2D2D;
     color: #B5BEC5;
-    height: 45px;
+    height: 20%;
     float: right;
     position: relative;
-    top: -40px;
     border-left: dimgray solid 5px;
     border-bottom: dimgray solid 5px;
 }
@@ -329,10 +329,9 @@ li > h3 {
     text-align: justify;
     background-color: #1A2D2D;
     color: #B5BEC5;
-    height: 145px;
+    height: 77%;
     float: right;
     position: relative;
-    top: -40px;
     border-left: dimgray solid 5px;
     border-top: dimgray solid 5px;
 }
