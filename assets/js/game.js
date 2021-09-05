@@ -24,8 +24,8 @@ document.addEventListener("DOMContentLoaded", function() {
     //display the text
     displayNarratorText();
     
-    //add event listener to complete text button
-    document.getElementsByClassName('complete-button')[0].addEventListener('click', fillNarratorText);
+    //add event listener to narrator text box
+    document.getElementsByClassName('narrator-text')[0].addEventListener('click', fillNarratorText);
 
     //add event listener to the enter key
     document.addEventListener('keyup', function(e) {
