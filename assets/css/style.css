@@ -254,24 +254,28 @@ li > h3 {
     margin-left: auto;
     margin-right: auto;
     height: 15vh;
+    text-align: center;
 }
 
 .action-input {
-    float: right;
-    clear: right;
-    position: relative;
     background-color: slategrey;
     border: darkslategray 2px solid;
     border-radius: 5%;
+    height: 2vh;
+    margin-top: 7vh;
 }
 
 .input-label {
-    float: right;
-    clear: right;
-    position: relative;
     margin: 5px 0;
 }
 
+.target-label {
+    clear: left;
+}
+
+.target-input {
+    clear: left;
+}
 .text-container {
     width: 99%;
     height: 30vh;
