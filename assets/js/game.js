@@ -1,9 +1,7 @@
-//These variables need to be glodal and must be declared before DOM is loaded
-//create the txt variable controlling narrator text
 let txt = "";
-//create the index variable, deciding if and what character to type to narrator box
+
 let index = 0;
-//create timer that handles textTyper function
+
 let timer;
 
 //game logic related bools: These bool variables control much of the game's logic. Whenever an event that permanently changes the game takes place these variables will be changed
@@ -19,9 +17,9 @@ document.addEventListener("DOMContentLoaded", function() {
     //set default room
     roomChange('living-room');
     
-    //decide the text to print
+
     setNarratorText();
-    //display the text
+
     displayNarratorText();
     
     //add event listener to narrator text box
@@ -29,11 +27,13 @@ document.addEventListener("DOMContentLoaded", function() {
 
     //add event listener to the enter key
     document.addEventListener('keyup', function(e) {
-        //check if Enter was pressed
         if(e.key === 'Enter'){
             readInput();
         }
     })
+
+    //add event listener to the execute button
+    document.getElementById('execute').addEventListener('click', readInput);
 
     //add event listeners to the inputs clearing the text on focus
     let inputs = document.getElementsByClassName('action-input');
