@@ -20,6 +20,7 @@ hr {
     width: 900px;
     margin: auto;
     background-color: #B5BEC5;
+    border: 1px solid black;
 }
 
 /* style the tab bar */
