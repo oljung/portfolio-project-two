@@ -62,7 +62,7 @@ In this section the existing features are listed and explained. There is also a 
     - How-to-play tab: This tab was very important, as many users will have limited experience playing this type of game, or haven't done so in a long time. The numbered image showing the controls of the game was therefore made, making it easy to explain what everything on the screen does. A step by step guide to the game was also made, giving the player an idea of how to navigate the game's challanges.
 - Game screen
     - The first important design choice for the game screen was to fit everything on the screen height to make sure the user doesn't need to scroll on the game screen. Therefore the size unit of vh was used a lit when designing the game screen.
-    - The color scheme on the game screen was to be consistent with the start screen, with a black background to give it teh feeling of the edges of an older screen.
+    - The color scheme on the game screen was to be consistent with the start screen, with a black background to give it the feeling of the edges of an older screen.
     - When placing the game controls the inputs was to be displayed in the center, drawing the user's attention to what can be done, to further push on the interactivity part of the site. In the taxt part most space was given to the narrator text, as that will most often be the main focus for the information given to the player.
 
 - Game story
@@ -73,7 +73,7 @@ In this section the existing features are listed and explained. There is also a 
 ### 2.2 Features left to implement
 
 - Save feature <br>
-Using browser storage the player will be able to pick up where he/she left the game. The will be checked on loading the DOM and set certain variables, room information and inventory to what hte player had on exiting the game.
+Using browser storage the player will be able to pick up where he/she left the game. The will be checked on loading the DOM and set certain variables, room information and inventory to what the player had on exiting the game.
 
 - 'Ground hog day' approach <br>
 In true ground hog day fashion the character in the game will remember what went wrong the last time, and display information accordingly. This means the game will remember where the player went wrong and change information accordingly
