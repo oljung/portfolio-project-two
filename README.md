@@ -48,7 +48,15 @@ The main audience of the site are likely to be users who enjoy playing games, bu
 
 ### 1.6 Design
 
+- Color scheme
+    - The main colors used are slategray #708090 and darkslategray #2F4F4F as they are easy to look at for a long time, provides good contrast and give color without being to "loud". That suits well for a page users may be looking at for a long time. When used for background slategray was slightly to dark, so a lighter version #B5BEC5 was used.Slategray and darkslategray are used as highlight colors on the start screen. Slategray and darkslategray was also used to inspire the coloring of textboxes where the text is teh lighter version of slategray #B5BEC5 and the background is a darker version of darkslategray #1A2D2D. This change was made to improve contrast between the colors
 
+- Typography
+    - For the game screen text, as well as any heading and button text, the Press Start 2P font was used to give a retro game feel to the site. As reading to dense text with that font can feel uncomfortable, Quicksand font was used for p elements of the start page. All text on the game screen is 2P font for the retro styling of the game.
+
+- Images
+    - For the start screen images are mainly used to enhance imformation, as with the inspiration partm or with the how to play section. These images are also made modal to give the user the ability to enlarge the image for better viewing.
+    - On the game screen images are used to add feeling and life to the game, making the player feel more engaged and help players immerse into the story.
 
 ## 2. Features
 
@@ -84,6 +92,9 @@ The story can be viewed as an introduction scene. Given the time limit of this p
 ## 3. Technologies Used
 
 ### 3.1 Languages Used
+- [HTML5](https://en.wikipedia.org/wiki/HTML5)
+- [CSS3](https://en.wikipedia.org/wiki/CSS)
+- [Javascript](https://en.wikipedia.org/wiki/JavaScript)
 
 ### 3.2 Frameworks, Libraries and Programs Used
 
@@ -100,13 +111,16 @@ The story can be viewed as an introduction scene. Given the time limit of this p
     - Google fonts was used to compare fonts and find suitable fonts that go well together.
 
 1. [Font Awesome](https://fontawesome.com/)
-    - Font awesome was used for symbols to add flavor to the site, and usaed for social media links.
+    - Font awesome was used for symbols to add flavor to the site, and used for social media links.
 
 1. [HTML validator](https://validator.w3.org/#validate_by_input)
     - Provided by W3C and used to validate the html on every page.
 
 1. [CSS validator](https://jigsaw.w3.org/css-validator/#validate_by_input)
     - Provided by W3C and used to validate the sites css.
+
+1. [Javascript validator](https://jshint.com/)
+    - A community driven validator to spot errors in Javascript code.
 
 1. [Responsive design checker](https://www.responsivedesignchecker.com/)
     - Used to confirm responsiveness on different devices.
@@ -117,10 +131,6 @@ The story can be viewed as an introduction scene. Given the time limit of this p
 1. [contrast tester](https://webaim.org/resources/contrastchecker/)
     - The Webaim contrast tester is used to check if contrast was good enough to display text on the selected background.
 ## 4. Testing
-
-### 4.1 Developmen process
-This section vill detail how each part of the site was implemented and tested during development to give an insight to have the site took form. A summary of testing can be found further down.
-
 
 ### 4.1 Validator testing
 
@@ -135,19 +145,38 @@ The CSS was tested using this [validator](https://jigsaw.w3.org/) The 9 warnings
 ### 4.2 Responsiveness and functionality
 
 #### 4.2.1 Responsiveness
-
+The site was tested using a responsiveness tester (see technologies used) and worked well for all screen sizes above screen width of 320, where some scrolling was needed. This is an issue for iPhone models blow iPhone 6.
 
 #### 4.2.2 Browser compability
-
+The site runs euqally satisfactory on Chrome, Firefox, IE, Edge and Safari.
 
 #### 4.2.3 Contrast testing
-
+Where text is written the contrast are:
+Black on #B5BEC5 has a ratio of 11.13:1 and passed all tests<br>
+Black on #2F4F4F has a ratio of 2.35:1 but is only used for social media icons and non active tabs. Howering will change color to #B5BEC5 to improve readability. This color contrast does not cause any major problems and was left in place<br>
+Black on #708090 has a ratio of 5.17:1 and failed on of the test, but is only used with large text where it passes the test<br>
+#B5BEC5 on #1A2D2D has a ratio of 7.64:1 and passes all tests<br>
 
 ### 4.3 Unfixed bugs
-
+There are currently no known unfixed bugs in the project
 
 ### 4.4 Testing user Stories
-
+- As an ownder, I want to make sure new users are able to find sufficent information to play the game
+    - The about and how to play tabs help users with information about what the game is, and how to actually play the game.
+- As an ownder, I want to make the user have the retro feel from the moment they enter the site
+    - The color choice and font choice give a retro feel. The pixalated images on the game screen enhance that feeling.
+- As an ownder, I want to make sure the game is playable and that the clues left in the game are not to difficult to find
+    - From the players that have currently played the game, the diffuculty is enough to get more experienced players to think for a bit, but not too difficult for new players.
+- As a user, I want to learn more about the inspiration for the game
+    - The about tab provides information about inspiration and links to further reading and exploring.
+- As a user, I want to learn how to play the game
+    - The how to play tab has an image detailing the game screen and a step by step guide on how to play. From user testing this has proven sufficient.
+- As a user, I want a retro game that is close enough to the classics to feel right, but still gives me a new experience
+    - Users testing the game who remembers the games used as inspiration has declared a feeling of nostalgia.
+- As a user, I want to be able to save my progress
+    - This feature is currently not implemented, may be outside of project scope.
+- As a user, I want to get the feeling of accomplishment, it must be clear if I won or not
+    - The game has both game won and game over screens displayed at appropriate times to inform the user of how they performed.
 
 ## 5. Deployment
 
