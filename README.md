@@ -139,8 +139,11 @@ The HTML was tested using this [validator](https://validator.w3.org/) with no er
 
 The CSS was tested using this [validator](https://jigsaw.w3.org/) The 9 warnings are all from the part of the hamburger nav bar menues where I followed a tutorial. I decided to keep that code as is, as the code runs ands the nav bar works. When going through the validator code I also noticed that the subsection menu was placed at the wrong side, see nav bar for more info.
 
-- [CSS validation result](assets/images/readme-images/valid-css.png)
+- [CSS validation result](assets/images/readme-images/css-validation.png)
 
+The javascript files were tested using [JSHint](https://jshint.com/) and the game.js returned 37 warnings all related to the keywords "let" "const" and the template string syntax. The script.js file returned six warning all related to the "let" keyword.
+- [script.js testing](assets/images/readmie-images/script-js-validation.png)
+- [game.js testing]((assets/images/readmie-images/game-js-validation.png))
 
 ### 4.2 Responsiveness and functionality
 
