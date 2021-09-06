@@ -201,7 +201,9 @@ li > h3 {
     margin: auto;
     display: block;
     width: 80%;
-    max-width: 700px;
+    height: auto;
+    max-height: 700px;
+    object-fit: contain;
 }
 
 .close {
