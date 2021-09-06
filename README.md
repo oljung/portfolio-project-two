@@ -51,7 +51,7 @@ The main audience of the site are likely to be users who enjoy playing games, bu
 ### 1.6 Design
 
 - Color scheme
-    - The main colors used are slategray #708090 and darkslategray #2F4F4F as they are easy to look at for a long time, provides good contrast and give color without being to "loud". That suits well for a page users may be looking at for a long time. When used for background slategray was slightly to dark, so a lighter version #B5BEC5 was used.Slategray and darkslategray are used as highlight colors on the start screen. Slategray and darkslategray was also used to inspire the coloring of textboxes where the text is teh lighter version of slategray #B5BEC5 and the background is a darker version of darkslategray #1A2D2D. This change was made to improve contrast between the colors
+    - The main colors used are slategray #708090 and darkslategray #2F4F4F as they are easy to look at for a long time, provides good contrast and give color without being to "loud". That suits well for a page users may be looking at for a long time. When used for background slategray was slightly to dark, so a lighter version #B5BEC5 was used.Slategray and darkslategray are used as highlight colors on the start screen. Slategray and darkslategray was also used to inspire the coloring of textboxes where the text is the lighter version of slategray #B5BEC5 and the background is a darker version of darkslategray #1A2D2D. This change was made to improve contrast between the colors
 
 - Typography
     - For the game screen text, as well as any heading and button text, the Press Start 2P font was used to give a retro game feel to the site. As reading to dense text with that font can feel uncomfortable, Quicksand font was used for p elements of the start page. All text on the game screen is 2P font for the retro styling of the game.
@@ -226,7 +226,17 @@ $ git clone https://github.com/oljung/portfolio-project-two
 
 ### Content
 
+- Inspiration for the content was taken from the hackathon project found [here](https://andrewdempsey2018.github.io/The-Never-Ending-Coding-Adventure-Codehog-Day/) where I was a contributing member. Big thanks to Andrew, John, Helena, Katherine and Yorick for the fun in making the game and the learning experience it provided. This project is a continuation and advancement of that project's idea.
+
+- All site content, except from images, was made by myself.
 
 ### Media
 
 Images used on this site are from these open source galleries: [pixabay](https://pixabay.com/) and [istock](https://www.istockphoto.com/en).
+
+### Testing
+- Big thanks to the hackathon team for accepting to try out the game and come with suggestions.
+
+- Big thanks to my wife Johanna for the patience shown and for agreeing to feel stupid for a while and try the game as complete as a beginner as one can be.
+
+- As always biggest thanks goes to Robin, Mikael, Andreas, Sebastian and Joakim - the crew - who always try my projects from every concievable and non-convievable angle to find ways to get me back on the ground when I soar to high. You guys are awesome, and mean, but mostly awesome.
