@@ -1,4 +1,4 @@
-// Wait for DOM content to load before running code
+//The functions here are adaptations from this tutorial :https://www.w3schools.com/howto/howto_css_modal_images.asp
 
 document.addEventListener("DOMContentLoaded", function() {
     //display default tab content

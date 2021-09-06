@@ -216,10 +216,17 @@ $ git clone https://github.com/oljung/portfolio-project-two
 
 ### Code
 
+3 different w3schools tutorials were used during the project: for tabs, modal images and timeout function
+
+- [tabs](https://www.w3schools.com/howto/howto_js_tabs.asp)
+
+- [modal images](https://www.w3schools.com/howto/howto_css_modal_images.asp)
+
+- [timeout function](https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_typewriter)
 
 ### Content
 
 
 ### Media
 
-Images used on this site are from these open source galleries: [pixabay](https://pixabay.com/), [unsplash](https://unsplash.com/) and [istock](https://www.istockphoto.com/en).
+Images used on this site are from these open source galleries: [pixabay](https://pixabay.com/) and [istock](https://www.istockphoto.com/en).
