@@ -53,8 +53,8 @@ function displayModal(){
     modalImg.alt = this.alt;
 
     //add listener to the "close" button
-    let close = document.getElementsByClassName('close')[0]
+    let close = document.getElementsByClassName('close')[0];
     close.onclick = function(){
         modal.style.display = 'none';
-    }
+    };
 }
