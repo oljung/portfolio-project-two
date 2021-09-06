@@ -8,7 +8,7 @@
 
 /* Generel styles for index page */
 body {
-    background-color: dimgrey;
+    background-color: whitesmoke;
     font-family: 'Press Start 2P', cursive;
 }
 
@@ -19,7 +19,7 @@ hr {
 .container {
     width: 900px;
     margin: auto;
-    background-color: slategrey;
+    background-color: #B5BEC5;
 }
 
 /* style the tab bar */
@@ -35,11 +35,11 @@ hr {
 }
 
 .tablinks:hover {
-    background-color: slategrey;
+    background-color: #B5BEC5;;
 }
 
 .active {
-    background-color: slategrey;
+    background-color: #B5BEC5;;
 }
 
 /* Style for the page content that will be displayed using the tab-bar*/
