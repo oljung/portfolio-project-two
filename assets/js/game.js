@@ -70,15 +70,15 @@ function displayNarratorText(){
  */
 function setNarratorText(){
     let room = document.getElementsByClassName('active-room')[0];
-    if(room.id === 'living-room'){
-        txt = 'You are standing in the living room, just minutes before your favourite "young people on a beach drama" show starts. There is an awful noise coming from the girl in the next room, you need to sort this or risk missing crucial information in the shows triangle drama...';
-    } else if(room.id === 'kitchen') {
-        txt = 'You are standing in the kitchen, the fridge is giving off a soft humming noice and the smell of fried bacon still lingers from hte lunch you just had';
-    } else if(room.id === 'girl-room') {
-        txt = "You are standing in front of the girl's room, where pandemonium is taking place. Apparently the girl has lost something, and until it is recovered you will all suffer...";
-    } else if(room.id === 'boy-room') {
-        txt = "You are standing in front of the boy's room, where an extremely angry boy is sitting on his bed. He seems to have just had a fight with both his sister and the other parent and is currently not allowing visitors";
+
+    //use object to set txt based on room.id
+    const message = {
+        'living-room': 'You are standing in the living room, just minutes before your favourite "young people on a beach drama" show starts. There is an awful noise coming from the girl in the next room, you need to sort this or risk missing crucial information in the shows triangle drama...',
+        'kitchen': 'You are standing in the kitchen, the fridge is giving off a soft humming noice and the smell of fried bacon still lingers from hte lunch you just had',
+        'girl-room': "You are standing in front of the girl's room, where pandemonium is taking place. Apparently the girl has lost something, and until it is recovered you will all suffer...",
+        'boy-room': "You are standing in front of the boy's room, where an extremely angry boy is sitting on his bed. He seems to have just had a fight with both his sister and the other parent and is currently not allowing visitors"
     }
+    txt = message[room.id];
 }
 
 /**
@@ -88,7 +88,7 @@ function textTyper() { // source: https://www.w3schools.com/howto/tryit.asp?file
     if(index >= 0 && index < txt.length) {
         document.getElementById('narrator').innerHTML += txt.charAt(index);
         index++;
-        setTimeout(textTyper, 100);
+        setTimeout(textTyper, 50);
     }
 }
 
