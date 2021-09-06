@@ -12,7 +12,7 @@ let findFluffy = false;
 let gameEnd = false;
 
 
-// Wait for DOM content to load before running code
+
 document.addEventListener("DOMContentLoaded", function() {
     //set default room
     roomChange('living-room');
@@ -57,7 +57,7 @@ function displayNarratorText(){
     
     //get the checkbox to check its value
     let checkbox = document.getElementById('auto-complete');
-    //determine status if checkbox
+
     if(checkbox.checked === true || gameEnd){
         fillNarratorText();
     } else {
@@ -91,9 +91,6 @@ function textTyper() { // source: https://www.w3schools.com/howto/tryit.asp?file
         setTimeout(textTyper, 100);
     }
 }
-
-/*function addText() {
-}*/
 
 /**
  * Function for instantly filling hte narrator text box
@@ -196,7 +193,6 @@ function roomChange(targetRoom) {
     let activeLocation = document.getElementsByClassName(targetRoom)[0];
     activeLocation.style.textDecoration = 'underline';
 
-    //set text and display it
     setNarratorText();
     displayNarratorText();
 }
@@ -272,10 +268,10 @@ function search(item) {
  * @param {the item the player is attempting to pick up} item 
  */
 function pickUpItem(item) {
-    //get the value of the inventory text box
+
     let inventory = document.getElementById('inventory');
     
-    //get information about the current location
+
     room = document.getElementsByClassName('active-room')[0];
 
     //if the player is not holding an item
@@ -431,7 +427,7 @@ function dropItem(item) {
 
 /**
  * Function for handling the talk to action, giving different results based on who is present in the location
- * @param {teh character to talk to} character 
+ * @param {the character to talk to} character 
  */
 function talkTo(character) {
     //get current location
