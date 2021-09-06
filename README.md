@@ -67,18 +67,35 @@ In this section the existing features are listed and explained. There is also a 
 ### 2.1 Existing features
 
 - Start screen
-    - When designing the start screen, it was important for the user to find the guide tabs. Using a tabbar at the top, where users normally look for that kind of navigation was therefore the obvious solution. Above the start button on the front page there is also a message encouraging new users to check those tabs out before playing.
+    - When designing the start screen, it was important for the user to find the guide tabs. Using a tabbar at the top, where users normally look for that kind of navigation was therefore the obvious solution. Above the start button on the front page there is also a message encouraging new users to check those tabs out before playing.<br>
+    ![start screen](assets/images/readme-images/start-page.png)
+    
     - About tab: Will display information about how the game came to be, what inspired it and links to further reading about them. Here the choice to use small images and then make them modal enlargeable was made to make the feel tighter and require less scrolling, especially on mobile devices
-    - How-to-play tab: This tab was very important, as many users will have limited experience playing this type of game, or haven't done so in a long time. The numbered image showing the controls of the game was therefore made, making it easy to explain what everything on the screen does. A step by step guide to the game was also made, giving the player an idea of how to navigate the game's challanges.
+    ![about screen](assets/images/readme-images/about-screen.png)
+    
+    - How-to-play tab: This tab was very important, as many users will have limited experience playing this type of game, or haven't done so in a long time. The numbered image showing the controls of the game was therefore made, making it easy to explain what everything on the screen does. A step by step guide to the game was also made, giving the player an idea of how to navigate the game's challanges.<br>
+    ![how to play](assets/images/readme-images/how-to-play-screen.png)
+
+    - All these tabs are accessed using the tab bar<br>
+    ![tab bar](assets/images/readme-images/tab-bar.png)
+
 - Game screen
     - The first important design choice for the game screen was to fit everything on the screen height to make sure the user doesn't need to scroll on the game screen. Therefore the size unit of vh was used a lit when designing the game screen.
+    ![game screen](assets/images/readme-images/game-screen.png)
+
     - The color scheme on the game screen was to be consistent with the start screen, with a black background to give it the feeling of the edges of an older screen.
+
     - When placing the game controls the inputs was to be displayed in the center, drawing the user's attention to what can be done, to further push on the interactivity part of the site. In the taxt part most space was given to the narrator text, as that will most often be the main focus for the information given to the player.
+        - Controls section<br>
+        ![controls](assets/images/readme-images/controls.png)
+
+        - Text area<br>
+        ![text area](assets/images/readme-images/text-area.png)
 
 - Game story
     - The game has a story where the player has to solve an issue, that of the screaming child. To do so the player must navigate some hurdles in order to provide the girl with the toy she is crying for.
-    - The story will end if the player makes certain ill informed choices, resulting in a game over screen.
-    - The game will be won if the player is able to provide the missing toy, resulting in a game won screen.
+    - The story will end if the player makes certain ill informed choices, resulting in a game over screen. (not shown, let it be a surpirse!)
+    - The game will be won if the player is able to provide the missing toy, resulting in a game won screen. (not shown, let it be a surpirse!)
 
 ### 2.2 Features left to implement
 
