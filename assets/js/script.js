@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function() {
     for(let i = 0; i < images.length; i++){
         images[i].addEventListener('click', displayModal);
     }
-})
+});
 
 /**
  * 
