@@ -3,6 +3,8 @@
 Parent hero is a puzzle/detective game where the goal is to locate a lost item. In order to locate said item the hero - you - must solve certain riddles to gain access to rooms and objects that are in some ways blocked. The game is inspired by the classic text based role playing games of the early computers, as well as the adventure game Shadowgate and the detective game Déjà vu for the Nintendo Entertainment System.
 The site with the game was build as a part of a diploma in fullstack software developlment in a course provided by code institute.
 
+Link to deployed site: https://oljung.github.io/portfolio-project-two/
+
 ## 1. User Experience
 
 ### 1.1 Project introduction
@@ -128,6 +130,9 @@ The story can be viewed as an introduction scene. Given the time limit of this p
 1. [tinypng](https://tinypng.com/)
     - Used to change image file size for shorter loading times without quiality loss.
 
+1. [pinetool.com](https://pinetools.com/pixelate-effect-image)
+    - Used to make images look pixalated.
+
 1. [contrast tester](https://webaim.org/resources/contrastchecker/)
     - The Webaim contrast tester is used to check if contrast was good enough to display text on the selected background.
 ## 4. Testing
@@ -135,15 +140,16 @@ The story can be viewed as an introduction scene. Given the time limit of this p
 ### 4.1 Validator testing
 
 The HTML was tested using this [validator](https://validator.w3.org/) with no errors or warnings for any of the .html files
+- [index](assets/images/readme-images/index-validation.png)
+- [game](assets/images/readme-images/game-html-validation.png)
 
-
-The CSS was tested using this [validator](https://jigsaw.w3.org/) The 9 warnings are all from the part of the hamburger nav bar menues where I followed a tutorial. I decided to keep that code as is, as the code runs ands the nav bar works. When going through the validator code I also noticed that the subsection menu was placed at the wrong side, see nav bar for more info.
+The CSS was tested using this [validator](https://jigsaw.w3.org/) returned with no errors and no warnings.
 
 - [CSS validation result](assets/images/readme-images/css-validation.png)
 
-The javascript files were tested using [JSHint](https://jshint.com/) and the game.js returned 37 warnings all related to the keywords "let" "const" and the template string syntax. The script.js file returned six warning all related to the "let" keyword.
-- [script.js testing](assets/images/readmie-images/script-js-validation.png)
-- [game.js testing]((assets/images/readmie-images/game-js-validation.png))
+The javascript files were tested using [JSHint](https://jshint.com/) and the game.js returned 37 warnings all related to the keywords "let" "const" and the template string syntax. The script.js file returned six warning all related to the "let" keyword. The unused variable in script.js is used in index.html as onclick function in button element.
+- [script.js testing](assets/images/readme-images/script-js-validation.png)
+- [game.js testing](assets/images/readme-images/game-js-validation.png)
 
 ### 4.2 Responsiveness and functionality
 
