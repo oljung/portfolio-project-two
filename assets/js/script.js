@@ -50,6 +50,7 @@ function displayModal(){
     //display modal and set img src to the same as the image clicked
     modal.style.display = 'block';
     modalImg.src = this.src;
+    modalImg.alt = this.alt;
 
     //add listener to the "close" button
     let close = document.getElementsByClassName('close')[0]
