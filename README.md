@@ -60,6 +60,9 @@ The main audience of the site are likely to be users who enjoy playing games, bu
     - For the start screen images are mainly used to enhance imformation, as with the inspiration partm or with the how to play section. These images are also made modal to give the user the ability to enlarge the image for better viewing.
     - On the game screen images are used to add feeling and life to the game, making the player feel more engaged and help players immerse into the story.
 
+- Wireframes
+Open this [pdf](assets/pdf/parent-hero.pdf) to view the wireframes for the project. Some changes were made to the layout to increase user experience and help responsiveness.
+
 ## 2. Features
 
 In this section the existing features are listed and explained. There is also a subsection for features to be implemented in the future, but fall outside of the scope for this project.
