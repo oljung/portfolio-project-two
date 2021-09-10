@@ -28,7 +28,7 @@ hr {
     font-family: inherit;
     padding: 10px;
     float: left;
-    background-color: darkslategray;
+    background-color: #f1e29f;
     border: 1px solid black;
     border-top-left-radius: 20%;
     border-top-right-radius: 20%;
@@ -40,7 +40,7 @@ hr {
 }
 
 .active {
-    background-color: #B5BEC5;;
+    background-color: #B5BEC5;
 }
 
 /* Style for the page content that will be displayed using the tab-bar*/
@@ -53,16 +53,26 @@ hr {
     font-family: inherit;
     padding: 10px;
     margin: 20px 0;
-    border: 5px solid darkslategray;
+    border: 5px solid #f1e29f;
     border-radius: 15%;
     background-color: slategray;
     cursor: pointer;
 }
 
 .game-button:hover {
-    border-color: black;
+    border-color: slategrey;
+    background-color: #f1e29f;
+    color: black;
+}
+
+.execute-button {
+    border-color: darkslategray;
+}
+
+.execute-button:hover {
+    color: #B5BEC5;
     background-color: darkslategray;
-    color: slategrey;
+    border-color: slategrey;
 }
 
 .tabcontent {
@@ -108,7 +118,7 @@ hr {
 .social-media {
     padding: 30px 0;
     font-size: 200%;
-    background-color: darkslategray;
+    background-color: #f1e29f;
     text-align: center;
 }
 
@@ -138,7 +148,7 @@ figure > img {
 }
 
 figure > img:hover {
-    background-color: darkslategray;
+    background-color: #f1e29f;
 }
 
 figcaption {
