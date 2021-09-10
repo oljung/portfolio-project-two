@@ -51,7 +51,7 @@ The main audience of the site are likely to be users who enjoy playing games, bu
 ### 1.6 Design
 
 - Color scheme
-    - The main colors used are slategray #708090 and darkslategray #2F4F4F as they are easy to look at for a long time, provides good contrast and give color without being to "loud". That suits well for a page users may be looking at for a long time. When used for background slategray was slightly to dark, so a lighter version #B5BEC5 was used.Slategray and darkslategray are used as highlight colors on the start screen. Slategray and darkslategray was also used to inspire the coloring of textboxes where the text is the lighter version of slategray #B5BEC5 and the background is a darker version of darkslategray #1A2D2D. This change was made to improve contrast between the colors
+    - The main colors used are slategray #708090 and darkslategray #2F4F4F as they are easy to look at for a long time, provides good contrast and give color without being to "loud". That suits well for a page users may be looking at for a long time. When used for background slategray was slightly to dark, so a lighter version #B5BEC5 was used. Slategray and darkslategray are used as highlight colors on the start screen. Slategray and darkslategray was also used to inspire the coloring of textboxes where the text is the lighter version of slategray #B5BEC5 and the background is a darker version of darkslategray #1A2D2D. This change was made to improve contrast between the colors. For the start page, rather than using darkslategray as background and highlight color, the color #f1e29f was used, to connect better with the game logo.
 
 - Typography
     - For the game screen text, as well as any heading and button text, the Press Start 2P font was used to give a retro game feel to the site. As reading to dense text with that font can feel uncomfortable, Quicksand font was used for p elements of the start page. All text on the game screen is 2P font for the retro styling of the game.
@@ -182,7 +182,7 @@ The site runs euqally satisfactory on Chrome, Firefox, IE, Edge and Safari.
 #### 4.2.3 Contrast testing
 Where text is written the contrast are:
 Black on #B5BEC5 has a ratio of 11.13:1 and passed all tests<br>
-Black on #2F4F4F has a ratio of 2.35:1 but is only used for social media icons and non active tabs. Howering will change color to #B5BEC5 to improve readability. This color contrast does not cause any major problems and was left in place<br>
+Black on #F1E29F has a ratio of 16.11:1 passing all tests with a large margin<br>
 Black on #708090 has a ratio of 5.17:1 and failed on of the test, but is only used with large text where it passes the test<br>
 #B5BEC5 on #1A2D2D has a ratio of 7.64:1 and passes all tests<br>
 
