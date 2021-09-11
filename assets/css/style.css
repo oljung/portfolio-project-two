@@ -346,7 +346,7 @@ li > h3 {
 .narrator-text {
     width: 60%;
     height: 100%;
-    text-align: justify;
+    text-align: left;
     background-color: #1A2D2D;
     color: #B5BEC5;
     float: left;
