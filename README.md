@@ -8,6 +8,15 @@ Link to deployed site: https://oljung.github.io/portfolio-project-two/
 ![responsiveness startscreen](assets/images/readme-images/responsive-start.png)
 ![responsiveness gamescreen](assets/images/readme-images/responsive-game.png)
 
+### Table of Contents
+**[1. User Experience](#1-user-experience)**<br>
+**[2. Features](#2-features)**<br>
+**[3. Technologies Used](#3-technologies-used)**<br>
+**[4. Testing](#4-testing)**<br>
+**[5. Deployment](#5-deployment)**<br>
+**[6. Credits](#6-credits)**<br>
+
+
 ## 1. User Experience
 
 ### 1.1 Project introduction
