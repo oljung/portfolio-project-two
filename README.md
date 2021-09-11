@@ -1,31 +1,34 @@
 # Parent Hero
 
 Parent hero is a puzzle/detective game where the goal is to locate a lost item. In order to locate said item the hero - you - must solve certain riddles to gain access to rooms and objects that are in some ways blocked. The game is inspired by the classic text based role playing games of the early computers, as well as the adventure game Shadowgate and the detective game Déjà vu for the Nintendo Entertainment System.
-The site with the game was build as a part of a diploma in fullstack software developlment in a course provided by code institute.
+The site with the game was built as a part of a diploma in fullstack software developlment in a course provided by Code Institute.
 
 Link to deployed site: https://oljung.github.io/portfolio-project-two/
+
+![responsiveness startscreen](assets/images/readme-images/responsive-start.png)
+![responsiveness gamescreen](assets/images/readme-images/responsive-game.png)
 
 ## 1. User Experience
 
 ### 1.1 Project introduction
 
-The site is designed to give the user information about what the game is, as well as a guide on how to play, before actually starting the game. Parent Hero will try to recreate the classic feel of controlling your hero using text based commands, giving the user a sense of control and that anything is possible. The game looks and feel like a game from the 80's without all the shortcomings in UX that so often were the case back then. Guiding the hero through the challanges should be equally challanging and rewarding.
+The site is designed to give the user information about what the game is, as well as a guide on how to play, before actually starting the game. Parent Hero will try to recreate the classic feel of controlling your hero using text based commands, giving the user a sense of control and that anything is possible. The game aims to look and feel like a game from the 80's without all the shortcomings in UX that so often were the case back then. Guiding the hero through the challanges should be equally challanging and rewarding.
 
 ### 1.2 Design guidelines
 
-Not everything that happened in the past was necessarily better, and the lack of information about how to use a system and how to play a game is a thing of the past that should best be left there. While some nostalgics may find the game, it is reasonable to assume that most user will have little to no experience playing a game like this. Therefore the first thing that greets the user will be a welcoming screen, shortly explaining what this is. The srartscreen will direct the user to an about page, giving more information about what the game is and how it came to be, as well as a "how to play" section. The "how to play" will use images and a step by step guide to help players get a basic understanding of how the game works.
+Not everything that happened in the past was necessarily better, and the lack of information about how to use a system and how to play a game is a thing of the past that should best be left there. While some nostalgics may end up at the site, it is reasonable to assume that most users will have little to no experience playing a game like this. Therefore the first thing that greets the user will be a welcoming screen, shortly explaining what this is. The srartscreen will direct the user to an about page, giving more information about what the game is and how it came to be, as well as a "how to play" section. The "how to play" will use images and a step by step guide to help players get a basic understanding of how the game works.
 
 ### 1.3 Project goals
 
 - Provide a challenging yet funny game that introduces new and younger players to old school text based games.
 
-- Provide a trip down memory lane for older players who has previous experience playing similar games
+- Provide a trip down memory lane for older players who has previous experience playing similar games.
 
-- Create a functioning game that is both retro and unique, that excites players enough to want a "chapter 2"
+- Create a functioning game that is both retro and unique, that excites players enough to want a "chapter 2".
 
 ### 1.4 Target audience
 
-The main audience of the site are likely to be users who enjoy playing games, but have limited experience with this type of game. A portion of them will not be used to games at all. Another main part of the audience will be experienced and older players looking for a retro game to make them feel nostalgic and remember all the good times they had, without all the headaches that came along with them. I can therefore devide the taget audince into two main categories:
+The main audience of the site is likely to be users who enjoy playing games, but have limited experience with this type of game. A portion of them will not be used to games at all. Another main part of the audience will be experienced and older players looking for a retro game to make them feel nostalgic and remember all the good times they had, without all the headaches that came along with them. I can therefore devide the taget audince into two main categories:
 
 - User who have little experience with this type of game or little experience of games in general: <br>
 **Needs:** Information about what type of game they are looking at, and why it looks the way it does. They will also want an in deapth explanation on how to play the game.<br>
@@ -39,9 +42,9 @@ The main audience of the site are likely to be users who enjoy playing games, bu
 
 ### 1.5 User stories
 
-- As an ownder, I want to make sure new users are able to find sufficent information to play the game
-- As an ownder, I want to make the user have the retro feel from the moment they enter the site
-- As an ownder, I want to make sure the game is playable and that the clues left in the game are not to difficult to find
+- As an owner, I want to make sure new users are able to find sufficent information to play the game
+- As an owner, I want to make the user have the retro feel from the moment they enter the site
+- As an owner, I want to make sure the game is playable and that the clues left in the game are not to difficult to find
 - As a user, I want to learn more about the inspiration for the game
 - As a user, I want to learn how to play the game
 - As a user, I want a retro game that is close enough to the classics to feel right, but still gives me a new experience
@@ -51,29 +54,29 @@ The main audience of the site are likely to be users who enjoy playing games, bu
 ### 1.6 Design
 
 - Color scheme
-    - The main colors used are slategray #708090 and darkslategray #2F4F4F as they are easy to look at for a long time, provides good contrast and give color without being to "loud". That suits well for a page users may be looking at for a long time. When used for background slategray was slightly to dark, so a lighter version #B5BEC5 was used. Slategray and darkslategray are used as highlight colors on the start screen. Slategray and darkslategray was also used to inspire the coloring of textboxes where the text is the lighter version of slategray #B5BEC5 and the background is a darker version of darkslategray #1A2D2D. This change was made to improve contrast between the colors. For the start page, rather than using darkslategray as background and highlight color, the color #f1e29f was used, to connect better with the game logo.
+    - The main colors used are based on slategray #708090 and darkslategray #2F4F4F as they are easy to look at for a long time, provides good contrast and give color without being to "loud". That suits well for a page users may be looking at for a long time. When used for background slategray was slightly to dark, so a lighter version #B5BEC5 was used. Slategray and #f1e29f are used as highlight colors on the start screen. Slategray and darkslategray was also used to inspire the coloring of textboxes where the text is the lighter version of slategray #B5BEC5 and the background is a darker version of darkslategray #1A2D2D. This change was made to improve contrast between the colors. For the start page, rather than using darkslategray as background and highlight color, the color #f1e29f was used, to connect better with the game logo.
 
 - Typography
     - For the game screen text, as well as any heading and button text, the Press Start 2P font was used to give a retro game feel to the site. As reading to dense text with that font can feel uncomfortable, Quicksand font was used for p elements of the start page. All text on the game screen is 2P font for the retro styling of the game.
 
 - Images
     - For the start screen images are mainly used to enhance imformation, as with the inspiration partm or with the how to play section. These images are also made modal to give the user the ability to enlarge the image for better viewing.
-    - On the game screen images are used to add feeling and life to the game, making the player feel more engaged and help players immerse into the story.
+    - On the game screen images are used to add feeling and life to the game, making the player feel more engaged and help players immerse into the story. The images were pixelated to enhance the retro feel of the game.
 
 - Wireframes
 Open this [pdf](assets/pdf/parent-hero.pdf) to view the wireframes for the project. Some changes were made to the layout to increase user experience and help responsiveness.
 
 ## 2. Features
 
-In this section the existing features are listed and explained. There is also a subsection for features to be implemented in the future, but fall outside of the scope for this project.
+In this section the existing features are listed and explained. There is also a subsection for features to be implemented in the future, but fall outside of the scope of this project.
 
 ### 2.1 Existing features
 
 - Start screen
-    - When designing the start screen, it was important for the user to find the guide tabs. Using a tabbar at the top, where users normally look for that kind of navigation was therefore the obvious solution. Above the start button on the front page there is also a message encouraging new users to check those tabs out before playing.<br>
+    - When designing the start screen, it was important for the user to find the guide tabs. Using a tab bar at the top, where users normally look for that kind of navigation was therefore the obvious solution. Above the start button on the front page there is also a message encouraging new users to check those tabs out before playing.<br>
     ![start screen](assets/images/readme-images/start-page.png)
     
-    - About tab: Will display information about how the game came to be, what inspired it and links to further reading about them. Here the choice to use small images and then make them modal enlargeable was made to make the feel tighter and require less scrolling, especially on mobile devices
+    - About tab: Will display information about how the game came to be, what inspired it and links to further reading about the games that inspired this project. Here the choice to use small images and then make them modal enlargeable was made to make the feel tighter and require less scrolling, especially on mobile devices.
     ![about screen](assets/images/readme-images/about-screen.png)
     
     - How-to-play tab: This tab was very important, as many users will have limited experience playing this type of game, or haven't done so in a long time. The numbered image showing the controls of the game was therefore made, making it easy to explain what everything on the screen does. A step by step guide to the game was also made, giving the player an idea of how to navigate the game's challanges.<br>
@@ -83,10 +86,10 @@ In this section the existing features are listed and explained. There is also a 
     ![tab bar](assets/images/readme-images/tab-bar.png)
 
 - Game screen
-    - The first important design choice for the game screen was to fit everything on the screen height to make sure the user doesn't need to scroll on the game screen. Therefore the size unit of vh was used a lit when designing the game screen.
+    - The first important design choice for the game screen was to fit everything on the screen height to make sure the user doesn't need to scroll on the game screen. Therefore the size unit of vh was used a lot when designing the game screen.
     ![game screen](assets/images/readme-images/game-screen.png)
 
-    - The color scheme on the game screen was to be consistent with the start screen, with a black background to give it the feeling of the edges of an older screen.
+    - The color scheme on the game screen was chosen to provied color and contrast, without using too bright colors as that can be distracting. The black background gives the game screen the feeling of the edges of an older screen/monitor.
 
     - When placing the game controls the inputs was to be displayed in the center, drawing the user's attention to what can be done, to further push on the interactivity part of the site. In the taxt part most space was given to the narrator text, as that will most often be the main focus for the information given to the player.
         - Controls section<br>
@@ -103,10 +106,10 @@ In this section the existing features are listed and explained. There is also a 
 ### 2.2 Features left to implement
 
 - Save feature <br>
-Using browser storage the player will be able to pick up where he/she left the game. The will be checked on loading the DOM and set certain variables, room information and inventory to what the player had on exiting the game.
+Using browser storage the player will be able to pick up where he/she left the game. The storage will be checked on loading the DOM and set certain variables, room information and inventory to what the player had on exiting the game.
 
 - 'Ground hog day' approach <br>
-In true ground hog day fashion the character in the game will remember what went wrong the last time, and display information accordingly. This means the game will remember where the player went wrong and change information accordingly
+In true ground hog day fashion the character in the game will remember what went wrong the last time, and display information accordingly. This means the game will remember where the player went wrong and change information according to the choices previously made by the player.
 
 - Story expansion <br>
 The story can be viewed as an introduction scene. Given the time limit of this project a longer story was not possible to implement. In the future this story can be expanded, providing the user with a long and challanging journey for perhaps hours of retro gaming fun.
@@ -180,21 +183,21 @@ The site was tested using a responsiveness tester (see technologies used) and wo
 The site runs euqally satisfactory on Chrome, Firefox, IE, Edge and Safari.
 
 #### 4.2.3 Contrast testing
-Where text is written the contrast are:
-Black on #B5BEC5 has a ratio of 11.13:1 and passed all tests<br>
-Black on #F1E29F has a ratio of 16.11:1 passing all tests with a large margin<br>
-Black on #708090 has a ratio of 5.17:1 and failed on of the test, but is only used with large text where it passes the test<br>
-#B5BEC5 on #1A2D2D has a ratio of 7.64:1 and passes all tests<br>
+Where text is written the contrast are:<br>
+Black on #B5BEC5 has a ratio of 11.13:1 and passed all tests.<br>
+Black on #F1E29F has a ratio of 16.11:1 passing all tests with a large margin.<br>
+Black on #708090 has a ratio of 5.17:1 and failed on one of the test, but is only used with large text where it passes the test.<br>
+#B5BEC5 on #1A2D2D has a ratio of 7.64:1 and passes all tests.<br>
 
 ### 4.3 Unfixed bugs
 There are currently no known unfixed bugs in the project
 
 ### 4.4 Testing user Stories
-- As an ownder, I want to make sure new users are able to find sufficent information to play the game
+- As an owner, I want to make sure new users are able to find sufficent information to play the game
     - The about and how to play tabs help users with information about what the game is, and how to actually play the game.
-- As an ownder, I want to make the user have the retro feel from the moment they enter the site
+- As an owner, I want to make the user have the retro feel from the moment they enter the site
     - The color choice and font choice give a retro feel. The pixalated images on the game screen enhance that feeling.
-- As an ownder, I want to make sure the game is playable and that the clues left in the game are not to difficult to find
+- As an owner, I want to make sure the game is playable and that the clues left in the game are not to difficult to find
     - From the players that have currently played the game, the diffuculty is enough to get more experienced players to think for a bit, but not too difficult for new players.
 - As a user, I want to learn more about the inspiration for the game
     - The about tab provides information about inspiration and links to further reading and exploring.
@@ -232,9 +235,9 @@ $ git clone https://github.com/oljung/portfolio-project-two
 ```
 7. Your clone will now be saved, and any commits will be saved to your new repository
 
-## Credits
+## 6. Credits
 
-### Code
+### 6.1 Code
 
 3 different w3schools tutorials were used during the project: for tabs, modal images and timeout function
 
@@ -244,19 +247,19 @@ $ git clone https://github.com/oljung/portfolio-project-two
 
 - [timeout function](https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_typewriter)
 
-### Content
+### 6.2 Content
 
 - Inspiration for the content was taken from the hackathon project found [here](https://andrewdempsey2018.github.io/The-Never-Ending-Coding-Adventure-Codehog-Day/) where I was a contributing member. Big thanks to Andrew, John, Helena, Katherine and Yorick for the fun in making the game and the learning experience it provided. This project is a continuation and advancement of that project's idea.
 
 - All site content, except from images, was made by myself.
 
-### Media
+### 6.3 Media
 
 Images used on this site are from these open source galleries: [pixabay](https://pixabay.com/) and [istock](https://www.istockphoto.com/en).
 
-### Testing
+### 6.4 Testing
 - Big thanks to the hackathon team for accepting to try out the game and come with suggestions.
 
-- Big thanks to my wife Johanna for the patience shown and for agreeing to feel stupid for a while and try the game as complete as a beginner as one can be.
+- Big thanks to my wife Johanna for the patience shown and for agreeing to feel stupid for a while and try the game as complete a beginner as one can be.
 
 - As always biggest thanks goes to Robin, Mikael, Andreas, Sebastian and Joakim - the crew - who always try my projects from every concievable and non-convievable angle to find ways to get me back on the ground when I soar to high. You guys are awesome, and mean, but mostly awesome.
