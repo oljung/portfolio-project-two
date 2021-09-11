@@ -6,6 +6,7 @@ let index = 0;
 let spouse = true;
 let tablet = false;
 let needGroceries = false;
+let findPhone = false;
 let findFluffy = false;
 let gameEnd = false;
 
@@ -213,7 +214,7 @@ function search(item) {
             case 'living-room':
             //if spouse is still present    
             if(spouse) {
-                    txt = "Your *spouse* is sitting on the couch scrolling on the phone. On the left side of the same couch is the boy's *tablet* and underneath the couch a *doll* is poking out its head.";
+                    txt = "Your *spouse* is sitting on the couch scrolling on the *phone*. On the left side of the same couch is the boy's *tablet* and underneath the couch a *doll* is poking out its head.";
                 } else {
                     txt = "Your *spouse* has left to shop for groceries and has vacated the couch, leaving only a pile of *blankets*.";
                 }
@@ -247,6 +248,7 @@ function search(item) {
             txt = 'Your spouse is cuddled up nicely in those blankets and is not to keen on you rummaging about.';
         } else {
             txt = 'The blankets are still warm, and after searching through then you find the *phone* your spouse left, and for some reason with the flashlight mode on.';
+            findPhone = true;
         }
     } else if(item === 'closet' && room.id === 'boy-room') {
         if(tablet) { //the boy is distracted
@@ -300,8 +302,12 @@ function pickUpItem(item) {
                         txt = "As you try to grab the phone from your spouse's hands, your spouse grips the phone harder. In your contest for the phone it slips, hits the floor and breaks. Instead of watching half-naked, attractive young people on a beach you aren now shopping for a phone.";
                         gameOver();
                     } else {
-                        txt = 'You pick up the phone, nearly blinding yourself from the intense shine of the flashlight function.';
-                        inventory.innerText = item;
+                        if(findPhone) {
+                            txt = 'You pick up the phone, nearly blinding yourself from the intense shine of the flashlight function.';
+                            inventory.innerText = item;
+                        } else {
+                            txt = 'You are unable to locate that item here...';
+                        }
                     }
                 } else {
                     txt = 'You are unable to locate that item here...';
