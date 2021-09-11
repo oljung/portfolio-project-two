@@ -488,14 +488,16 @@ function talkTo(character) {
 
 function gameOver() {
     gameEnd = true;
+    document.getElementById('game-lost-text').innerHTML = txt;
     setTimeout(function() {
         document.getElementById('game-lost').style.display = 'block';
-    }, 10000);
+    }, 2000);
 }
 
 function gameWon() {
     gameEnd = true;
+    document.getElementById('game-won-text').innerHTML = txt;
     setTimeout(function() {
         document.getElementById('game-won').style.display = 'block';
-    }, 10000);
+    }, 2000);
 }
