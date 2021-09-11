@@ -150,6 +150,9 @@ The story can be viewed as an introduction scene. Given the time limit of this p
 1. [Responsive design checker](https://www.responsivedesignchecker.com/)
     - Used to confirm responsiveness on different devices.
 
+1. [Responsive images](http://ami.responsivedesign.is/)
+    - Used to get responsive images for the readme.
+
 1. [tinypng](https://tinypng.com/)
     - Used to change image file size for shorter loading times without quiality loss.
 
